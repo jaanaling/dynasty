@@ -1,0 +1,174 @@
+ [
+    {
+      "id": "block1",
+      "title": "The Tang Dynasty",
+      "description": "Exploring the history, culture, and economy of the Tang Dynasty.",
+      "lessons": [
+        {
+          "id": "lesson1",
+          "title": "The Rise of the Tang Dynasty",
+          "description": "The origins and foundation of the Tang Dynasty.",
+          "topics": ["Politics", "Military", "Leadership"],
+          "content": "The Tang Dynasty was founded in 618 AD by Li Yuan, known as Emperor Gaozu. The dynasty rose to power after the collapse of the Sui Dynasty, bringing stability and prosperity.",
+          "highlightedTexts": ["Emperor Gaozu", "Tang Dynasty"],
+          "relatedDates": ["618 AD"],
+          "relatedPeople": ["Li Yuan"],
+          "relatedPlaces": ["Chang'an"]
+        },
+        {
+          "id": "lesson2",
+          "title": "Tang Culture and Art",
+          "description": "The flourishing of art and culture during the Tang period.",
+          "topics": ["Culture", "Art", "Society"],
+          "content": "Tang China was a golden age for Chinese culture, marked by the development of poetry, painting, and calligraphy. Artists and poets like Li Bai and Du Fu became iconic figures.",
+          "highlightedTexts": ["Li Bai", "Du Fu"],
+          "relatedDates": ["700s"],
+          "relatedPeople": ["Li Bai", "Du Fu"],
+          "relatedPlaces": ["Luoyang"]
+        },
+        {
+          "id": "lesson3",
+          "title": "The Silk Road",
+          "description": "Trade and cultural exchange through the Silk Road.",
+          "topics": ["Economy", "Trade", "International Relations"],
+          "content": "The Silk Road facilitated trade between China and the West, exporting silk, spices, and knowledge.",
+          "highlightedTexts": ["Silk Road", "trade"],
+          "relatedDates": ["7th century"],
+          "relatedPeople": ["Xuanzang"],
+          "relatedPlaces": ["Dunhuang"]
+        },
+        {
+          "id": "lesson4",
+          "title": "Empress Wu Zetian",
+          "description": "The life and reign of China's only female emperor.",
+          "topics": ["Leadership", "Gender", "Politics"],
+          "content": "Wu Zetian rose to power as Empress and later declared herself Emperor, leading with a mix of diplomacy and ruthlessness.",
+          "highlightedTexts": ["Wu Zetian", "Empress"],
+          "relatedDates": ["690 AD"],
+          "relatedPeople": ["Wu Zetian"],
+          "relatedPlaces": ["Luoyang"]
+        },
+        {
+          "id": "lesson5",
+          "title": "Tang Architecture",
+          "description": "The development of distinctive Tang architectural styles.",
+          "topics": ["Architecture", "Urban Planning"],
+          "content": "The Tang Dynasty saw the growth of urban centers with grand palaces, pagodas, and temples.",
+          "highlightedTexts": ["architecture", "urban planning"],
+          "relatedDates": ["8th century"],
+          "relatedPeople": ["Emperor Xuanzong"],
+          "relatedPlaces": ["Chang'an"]
+        },
+        {
+          "id": "lesson6",
+          "title": "The An Lushan Rebellion",
+          "description": "A major rebellion that weakened the Tang Dynasty.",
+          "topics": ["Military", "Politics", "Civil Conflict"],
+          "content": "In 755 AD, the general An Lushan led a rebellion that nearly toppled the Tang Dynasty, leaving it weakened.",
+          "highlightedTexts": ["An Lushan", "rebellion"],
+          "relatedDates": ["755 AD"],
+          "relatedPeople": ["An Lushan"],
+          "relatedPlaces": ["Chang'an"]
+        },
+        {
+          "id": "lesson7",
+          "title": "Decline and Fall of the Tang Dynasty",
+          "description": "The factors that led to the fall of the Tang Dynasty.",
+          "topics": ["Economy", "Politics", "Society"],
+          "content": "Over time, economic difficulties and internal strife weakened the Tang, leading to its collapse in 907 AD.",
+          "highlightedTexts": ["decline", "collapse"],
+          "relatedDates": ["907 AD"],
+          "relatedPeople": ["Zhu Wen"],
+          "relatedPlaces": ["Chang'an"]
+        }
+      ],
+      "quizzesId": ["quiz1", "quiz2", "quiz3"]
+    },
+    {
+      "id": "block2",
+      "title": "The Song Dynasty",
+      "description": "The achievements and challenges of the Song Dynasty.",
+      "lessons": [
+        {
+          "id": "lesson8",
+          "title": "Founding of the Song Dynasty",
+          "description": "How the Song Dynasty was established.",
+          "topics": ["Politics", "Military"],
+          "content": "The Song Dynasty was founded in 960 AD by Emperor Taizu, bringing an era of peace and development.",
+          "highlightedTexts": ["Emperor Taizu", "Song Dynasty"],
+          "relatedDates": ["960 AD"],
+          "relatedPeople": ["Emperor Taizu"],
+          "relatedPlaces": ["Kaifeng"]
+        },
+        {
+          "id": "lesson9",
+          "title": "Neo-Confucianism",
+          "description": "The philosophical development of Neo-Confucianism.",
+          "topics": ["Philosophy", "Religion", "Society"],
+          "content": "During the Song Dynasty, Confucian scholars such as Zhu Xi developed Neo-Confucianism, blending Confucianism with Daoism and Buddhism.",
+          "highlightedTexts": ["Neo-Confucianism", "Zhu Xi"],
+          "relatedDates": ["1130 AD"],
+          "relatedPeople": ["Zhu Xi"],
+          "relatedPlaces": ["Jiangxi"]
+        },
+        {
+          "id": "lesson10",
+          "title": "Scientific Advancements",
+          "description": "Inventions and discoveries during the Song period.",
+          "topics": ["Science", "Technology", "Innovation"],
+          "content": "The Song Dynasty saw advancements such as movable-type printing, gunpowder, and the compass.",
+          "highlightedTexts": ["printing", "gunpowder", "compass"],
+          "relatedDates": ["11th century"],
+          "relatedPeople": ["Bi Sheng"],
+          "relatedPlaces": ["Kaifeng"]
+        },
+        {
+          "id": "lesson11",
+          "title": "Song Military",
+          "description": "The challenges faced by the Song military.",
+          "topics": ["Military", "Politics"],
+          "content": "The Song Dynasty struggled with external threats from the Khitan, Jurchen, and later the Mongols.",
+          "highlightedTexts": ["Khitan", "Jurchen", "Mongols"],
+          "relatedDates": ["1127 AD"],
+          "relatedPeople": ["Emperor Huizong"],
+          "relatedPlaces": ["Kaifeng"]
+        },
+        {
+          "id": "lesson12",
+          "title": "Song Economy",
+          "description": "Economic development in the Song era.",
+          "topics": ["Economy", "Trade"],
+          "content": "The Song Dynasty saw a market economy with the growth of trade, using paper money for the first time.",
+          "highlightedTexts": ["economy", "trade", "paper money"],
+          "relatedDates": ["1023 AD"],
+          "relatedPeople": ["Emperor Zhenzong"],
+          "relatedPlaces": ["Kaifeng"]
+        },
+        {
+          "id": "lesson13",
+          "title": "Art of the Song Dynasty",
+          "description": "Song art and culture.",
+          "topics": ["Art", "Culture"],
+          "content": "Song China is renowned for its landscape painting and pottery.",
+          "highlightedTexts": ["painting", "pottery"],
+          "relatedDates": ["12th century"],
+          "relatedPeople": ["Emperor Huizong"],
+          "relatedPlaces": ["Kaifeng"]
+        },
+        {
+          "id": "lesson14",
+          "title": "Fall of the Song Dynasty",
+          "description": "The events leading to the fall of the Song Dynasty.",
+          "topics": ["Politics", "Military"],
+          "content": "The Song Dynasty fell to the Mongol-led Yuan Dynasty in 1279.",
+          "highlightedTexts": ["Yuan Dynasty", "fall"],
+          "relatedDates": ["1279 AD"],
+          "relatedPeople": ["Kublai Khan"],
+          "relatedPlaces": ["Hangzhou"]
+        }
+      ],
+      "quizzesId": ["quiz4", "quiz5", "quiz6"]
+    }
+   
+  ]
+

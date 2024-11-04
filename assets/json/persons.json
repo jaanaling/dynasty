@@ -1,0 +1,122 @@
+[
+    {
+      "id": "person1",
+      "name": "Li Yuan",
+      "bio": "Founder of the Tang Dynasty, known as Emperor Gaozu. He established the Tang Dynasty in 618 AD after the collapse of the Sui Dynasty.",
+      "birthDate": "566-01-01",
+      "deathDate": "635-06-25",
+      "relatedEvents": ["event1"],
+      "relatedDates": ["date1"],
+      "relatedPlaces": ["place1"]
+    },
+    {
+      "id": "person2",
+      "name": "Li Bai",
+      "bio": "One of the most famous poets of the Tang Dynasty, known for his romantic style and celebration of nature.",
+      "birthDate": "701-01-01",
+      "deathDate": "762-01-01",
+      "relatedEvents": [],
+      "relatedDates": ["date2"],
+      "relatedPlaces": ["place2"]
+    },
+    {
+      "id": "person3",
+      "name": "Du Fu",
+      "bio": "A prominent Tang Dynasty poet who wrote on themes of hardship and the human condition.",
+      "birthDate": "712-01-01",
+      "deathDate": "770-01-01",
+      "relatedEvents": [],
+      "relatedDates": ["date2"],
+      "relatedPlaces": ["place2"]
+    },
+    {
+      "id": "person4",
+      "name": "Xuanzang",
+      "bio": "A Buddhist monk and traveler who journeyed to India along the Silk Road and translated many Buddhist texts.",
+      "birthDate": "602-01-01",
+      "deathDate": "664-01-01",
+      "relatedEvents": ["event2"],
+      "relatedDates": ["date3"],
+      "relatedPlaces": ["place3"]
+    },
+    {
+      "id": "person5",
+      "name": "Wu Zetian",
+      "bio": "The only female emperor of China, who ruled during the Tang Dynasty.",
+      "birthDate": "624-02-17",
+      "deathDate": "705-12-16",
+      "relatedEvents": ["event3"],
+      "relatedDates": ["date4"],
+      "relatedPlaces": ["place2"]
+    },
+    {
+      "id": "person6",
+      "name": "Emperor Xuanzong",
+      "bio": "An emperor during the Tang Dynasty, known for his cultural contributions and initial prosperity before the An Lushan Rebellion.",
+      "birthDate": "685-09-08",
+      "deathDate": "762-05-03",
+      "relatedEvents": ["event4"],
+      "relatedDates": ["date5"],
+      "relatedPlaces": ["place1"]
+    },
+    {
+      "id": "person7",
+      "name": "An Lushan",
+      "bio": "A general who led the An Lushan Rebellion against the Tang Dynasty in 755 AD.",
+      "birthDate": "703-01-01",
+      "deathDate": "757-01-29",
+      "relatedEvents": ["event4"],
+      "relatedDates": ["date6"],
+      "relatedPlaces": ["place1"]
+    },
+    {
+      "id": "person8",
+      "name": "Zhu Wen",
+      "bio": "The warlord who ended the Tang Dynasty and founded the Later Liang Dynasty.",
+      "birthDate": "852-01-01",
+      "deathDate": "912-01-01",
+      "relatedEvents": ["event5"],
+      "relatedDates": ["date7"],
+      "relatedPlaces": ["place1"]
+    },
+    {
+      "id": "person9",
+      "name": "Emperor Taizu",
+      "bio": "The founding emperor of the Song Dynasty, established in 960 AD.",
+      "birthDate": "927-03-21",
+      "deathDate": "976-11-14",
+      "relatedEvents": ["event6"],
+      "relatedDates": ["date8"],
+      "relatedPlaces": ["place4"]
+    },
+    {
+      "id": "person10",
+      "name": "Zhu Xi",
+      "bio": "A Song Dynasty scholar and philosopher who developed Neo-Confucianism.",
+      "birthDate": "1130-10-18",
+      "deathDate": "1200-04-23",
+      "relatedEvents": [],
+      "relatedDates": ["date9"],
+      "relatedPlaces": ["place5"]
+    },
+    {
+      "id": "person11",
+      "name": "Bi Sheng",
+      "bio": "An inventor credited with the development of movable type printing during the Song Dynasty.",
+      "birthDate": "990-01-01",
+      "deathDate": "1051-01-01",
+      "relatedEvents": [],
+      "relatedDates": ["date10"],
+      "relatedPlaces": ["place4"]
+    },
+    {
+      "id": "person12",
+      "name": "Kublai Khan",
+      "bio": "The Mongol leader who founded the Yuan Dynasty after defeating the Song Dynasty.",
+      "birthDate": "1215-09-23",
+      "deathDate": "1294-02-18",
+      "relatedEvents": ["event7"],
+      "relatedDates": ["date11"],
+      "relatedPlaces": ["place6"]
+    }
+  ]

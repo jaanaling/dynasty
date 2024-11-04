@@ -1,0 +1,56 @@
+[
+    {
+      "id": "place1",
+      "name": "Chang'an",
+      "description": "Capital city of the Tang Dynasty, located in modern-day Xi'an.",
+      "relatedEvents": ["event1", "event4"],
+      "relatedPeople": ["person1", "person6", "person7"],
+      "relatedDates": ["date1", "date5", "date6"],
+      "mapLocation": "34.3416,108.9398"
+    },
+    {
+      "id": "place2",
+      "name": "Luoyang",
+      "description": "Another key city during the Tang Dynasty and capital under Empress Wu Zetian.",
+      "relatedEvents": ["event3"],
+      "relatedPeople": ["person2", "person3", "person5"],
+      "relatedDates": ["date2", "date4"],
+      "mapLocation": "34.6197,112.4540"
+    },
+    {
+      "id": "place3",
+      "name": "Silk Road",
+      "description": "The ancient trade route that connected China with the West, traversed by Xuanzang.",
+      "relatedEvents": ["event2"],
+      "relatedPeople": ["person4"],
+      "relatedDates": ["date3"],
+      "mapLocation": "35.0000,105.0000"
+    },
+    {
+      "id": "place4",
+      "name": "Kaifeng",
+      "description": "Early capital of the Song Dynasty.",
+      "relatedEvents": ["event6"],
+      "relatedPeople": ["person9", "person11"],
+      "relatedDates": ["date8", "date10"],
+      "mapLocation": "34.7972,114.3073"
+    },
+    {
+      "id": "place5",
+      "name": "Mount Lu",
+      "description": "A mountain in Jiangxi Province where Zhu Xi developed Neo-Confucianism.",
+      "relatedEvents": [],
+      "relatedPeople": ["person10"],
+      "relatedDates": ["date9"],
+      "mapLocation": "29.5573,115.9908"
+    },
+    {
+      "id": "place6",
+      "name": "Dadu",
+      "description": "Capital of the Yuan Dynasty, established by Kublai Khan.",
+      "relatedEvents": ["event7"],
+      "relatedPeople": ["person12"],
+      "relatedDates": ["date11"],
+      "mapLocation": "39.9042,116.4074"
+    }
+  ]

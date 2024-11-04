@@ -1,0 +1,90 @@
+[
+    {
+      "id": "date1",
+      "date": "618-01-01",
+      "description": "Founding of the Tang Dynasty by Li Yuan.",
+      "relatedPeople": ["person1"],
+      "relatedPlaces": ["place1"],
+      "relatedEvents": ["event1"]
+    },
+    {
+      "id": "date2",
+      "date": "700-01-01",
+      "description": "Golden age of poetry during the Tang Dynasty.",
+      "relatedPeople": ["person2", "person3"],
+      "relatedPlaces": ["place2"],
+      "relatedEvents": []
+    },
+    {
+      "id": "date3",
+      "date": "629-01-01",
+      "description": "Xuanzang's pilgrimage to India along the Silk Road.",
+      "relatedPeople": ["person4"],
+      "relatedPlaces": ["place3"],
+      "relatedEvents": ["event2"]
+    },
+    {
+      "id": "date4",
+      "date": "690-01-01",
+      "description": "Wu Zetian declares herself emperor of China.",
+      "relatedPeople": ["person5"],
+      "relatedPlaces": ["place2"],
+      "relatedEvents": ["event3"]
+    },
+    {
+      "id": "date5",
+      "date": "742-01-01",
+      "description": "Reign of Emperor Xuanzong at its peak.",
+      "relatedPeople": ["person6"],
+      "relatedPlaces": ["place1"],
+      "relatedEvents": ["event4"]
+    },
+    {
+      "id": "date6",
+      "date": "755-01-01",
+      "description": "The start of the An Lushan Rebellion.",
+      "relatedPeople": ["person7"],
+      "relatedPlaces": ["place1"],
+      "relatedEvents": ["event4"]
+    },
+    {
+      "id": "date7",
+      "date": "907-01-01",
+      "description": "The fall of the Tang Dynasty.",
+      "relatedPeople": ["person8"],
+      "relatedPlaces": ["place1"],
+      "relatedEvents": ["event5"]
+    },
+    {
+      "id": "date8",
+      "date": "960-01-01",
+      "description": "Founding of the Song Dynasty by Emperor Taizu.",
+      "relatedPeople": ["person9"],
+      "relatedPlaces": ["place4"],
+      "relatedEvents": ["event6"]
+    },
+    {
+      "id": "date9",
+      "date": "1130-01-01",
+      "description": "Development of Neo-Confucianism by Zhu Xi.",
+      "relatedPeople": ["person10"],
+      "relatedPlaces": ["place5"],
+      "relatedEvents": []
+    },
+    {
+      "id": "date10",
+      "date": "1040-01-01",
+      "description": "Invention of movable type printing by Bi Sheng.",
+      "relatedPeople": ["person11"],
+      "relatedPlaces": ["place4"],
+      "relatedEvents": []
+    },
+    {
+      "id": "date11",
+      "date": "1279-01-01",
+      "description": "Kublai Khan's conquest of the Song Dynasty, founding the Yuan Dynasty.",
+      "relatedPeople": ["person12"],
+      "relatedPlaces": ["place6"],
+      "relatedEvents": ["event7"]
+    }
+  ]

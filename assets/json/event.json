@@ -1,0 +1,58 @@
+[
+    {
+      "id": "event1",
+      "title": "Founding of the Tang Dynasty",
+      "description": "The Tang Dynasty was founded by Li Yuan in 618 AD.",
+      "relatedPeople": ["person1"],
+      "relatedPlaces": ["place1"],
+      "relatedDates": ["date1"]
+    },
+    {
+      "id": "event2",
+      "title": "Xuanzang's Pilgrimage to India",
+      "description": "Xuanzang embarked on a pilgrimage to India along the Silk Road to study Buddhism.",
+      "relatedPeople": ["person4"],
+      "relatedPlaces": ["place3"],
+      "relatedDates": ["date3"]
+    },
+    {
+      "id": "event3",
+      "title": "Empress Wu Zetian's Reign",
+      "description": "Wu Zetian declared herself the Emperor of China, ruling as the only female emperor.",
+      "relatedPeople": ["person5"],
+      "relatedPlaces": ["place2"],
+      "relatedDates": ["date4"]
+    },
+    {
+      "id": "event4",
+      "title": "An Lushan Rebellion",
+      "description": "A major rebellion led by An Lushan against the Tang Dynasty.",
+      "relatedPeople": ["person6", "person7"],
+      "relatedPlaces": ["place1"],
+      "relatedDates": ["date5", "date6"]
+    },
+    {
+      "id": "event5",
+      "title": "Fall of the Tang Dynasty",
+      "description": "The Tang Dynasty came to an end, leading to the Five Dynasties and Ten Kingdoms period.",
+      "relatedPeople": ["person8"],
+      "relatedPlaces": ["place1"],
+      "relatedDates": ["date7"]
+    },
+    {
+      "id": "event6",
+      "title": "Founding of the Song Dynasty",
+      "description": "The Song Dynasty was established by Emperor Taizu in 960 AD.",
+      "relatedPeople": ["person9"],
+      "relatedPlaces": ["place4"],
+      "relatedDates": ["date8"]
+    },
+    {
+      "id": "event7",
+      "title": "Conquest of the Song Dynasty by Kublai Khan",
+      "description": "Kublai Khan conquered the Song Dynasty, founding the Yuan Dynasty.",
+      "relatedPeople": ["person12"],
+      "relatedPlaces": ["place6"],
+      "relatedDates": ["date11"]
+    }
+  ]
