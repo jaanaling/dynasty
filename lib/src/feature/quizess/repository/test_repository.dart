@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:dynasty_dive/src/core/utils/json_loader.dart';
+import 'package:dynasty_dive/src/feature/lesson/models/lesson_bloc.dart';
 import 'package:dynasty_dive/src/feature/quizess/models/test.dart';
 import 'package:dynasty_dive/src/feature/quizess/models/test_result.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,17 +16,11 @@ class TestRepository {
   }
 
   Future<List<Test>> getAllTests() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final String? testJson = prefs.getString("tests");
-
-    if (testJson != null) {
-      final List<dynamic> jsonList = jsonDecode(testJson) as List<dynamic>;
-      return jsonList
-          .map((item) => Test.fromMap(item as Map<String, dynamic>))
-          .toList();
-    }
-
-    return [];
+    return JsonLoader.loadData<Test>(
+      'tests',
+      'assets/json/quiz.json',
+      (json) => Test.fromMap(json),
+    );
   }
 
   Future<void> saveUserTestResult(int testId, int score) async {

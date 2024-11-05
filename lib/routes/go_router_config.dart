@@ -3,9 +3,9 @@ import 'package:dynasty_dive/src/feature/notions/presentation/screens/notions_sc
 import 'package:dynasty_dive/src/feature/quizess/presentation/screens/quiz_screen.dart';
 import 'package:dynasty_dive/src/feature/quizess/presentation/screens/quizess_screen.dart';
 import 'package:dynasty_dive/src/feature/quizess/presentation/screens/result_screen.dart';
-import 'package:dynasty_dive/src/feature/sections/presentation/screens/lesson_screen.dart';
-import 'package:dynasty_dive/src/feature/sections/presentation/screens/lessons_screen.dart';
-import 'package:dynasty_dive/src/feature/sections/presentation/screens/sections_screen.dart';
+import 'package:dynasty_dive/src/feature/lesson/presentation/screens/lesson_screen.dart';
+import 'package:dynasty_dive/src/feature/lesson/presentation/screens/lessons_screen.dart';
+import 'package:dynasty_dive/src/feature/lesson/presentation/screens/sections_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';

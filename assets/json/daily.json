@@ -1,0 +1,37 @@
+[
+    {
+        "image": "assets/images/fact1.png",
+        "title": "The introduction of the 'open door' reforms by Deng Xiaoping (1978)",
+        "content": "In 1978, Deng Xiaoping initiated a series of economic reforms known as the 'Open Door Policy,' which aimed to open China to foreign investment and trade, leading to rapid economic growth."
+    },
+    {
+        "image": "assets/images/fact2.png",
+        "title": "The construction of the Great Wall of China (begun in the III century BC)",
+        "content": "The Great Wall of China was constructed starting in the 3rd century BC to protect Chinese states from invasions. Over centuries, various dynasties expanded and rebuilt sections of the wall."
+    },
+    {
+        "image": "assets/images/fact3.png",
+        "title": "The Taiping Rebellion (1850-1864)",
+        "content": "The Taiping Rebellion was a massive civil war in southern China led by Hong Xiuquan against the Qing dynasty, resulting in millions of deaths and significant social upheaval."
+    },
+    {
+        "image": "assets/images/fact4.png",
+        "title": "The beginning of the Great Communist Campaign (October 16, 1934)",
+        "content": "On October 16, 1934, the Long March began as a strategic retreat by the Red Army of the Chinese Communist Party to evade the pursuit of the Kuomintang, leading to a pivotal moment in Chinese revolutionary history."
+    },
+    {
+        "image": "assets/images/fact5.png",
+        "title": "The founding of the Han Dynasty (202 BC)",
+        "content": "The Han Dynasty, established in 202 BC, is considered a golden age of Chinese civilization, marked by significant advancements in technology, culture, and trade."
+    },
+    {
+        "image": "assets/images/fact6.png",
+        "title": "The May 4 Movement (May 4, 1919)",
+        "content": "The May 4 Movement was a cultural and political movement in China that emerged in response to the Treaty of Versailles, advocating for modernization and the rejection of traditional Confucian values."
+    },
+    {
+        "image": "assets/images/fact7.png",
+        "title": "Proclamation of the People's Republic of China (October 1, 1949)",
+        "content": "On October 1, 1949, Mao Zedong declared the founding of the People's Republic of China, marking the end of the Chinese Civil War and the establishment of a communist government."
+    }
+]

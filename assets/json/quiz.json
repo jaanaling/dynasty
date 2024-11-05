@@ -1,0 +1,392 @@
+[{
+    "id": "quiz1",
+    "title": "Basics of the Tang Dynasty",
+    "description": "A test on key events and figures of the Tang Dynasty.",
+    "dificulty": 1,
+    "category": "History",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "When was the Tang Dynasty founded?",
+        "answers": [
+          {"id": "a1", "answerText": "618 AD", "score": 1},
+          {"id": "a2", "answerText": "581 AD", "score": 0},
+          {"id": "a3", "answerText": "626 AD", "score": 0},
+          {"id": "a4", "answerText": "660 AD", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "Who was the first emperor of the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Li Yuan", "score": 1},
+          {"id": "a2", "answerText": "Li Shimin", "score": 0},
+          {"id": "a3", "answerText": "Wu Zetian", "score": 0},
+          {"id": "a4", "answerText": "An Lushan", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What city became the capital of the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Chang'an", "score": 1},
+          {"id": "a2", "answerText": "Luoyang", "score": 0},
+          {"id": "a3", "answerText": "Nanjing", "score": 0},
+          {"id": "a4", "answerText": "Beijing", "score": 0}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quiz2",
+    "title": "The Rise of Emperor Taizong",
+    "description": "A test on the life and reign of Emperor Taizong.",
+    "dificulty": 2,
+    "category": "History",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What event led to Li Shimin's ascension to the throne?",
+        "answers": [
+          {"id": "a1", "answerText": "Xuanwu Gate Incident", "score": 1},
+          {"id": "a2", "answerText": "An Lushan Rebellion", "score": 0},
+          {"id": "a3", "answerText": "Chang'an Mutiny", "score": 0},
+          {"id": "a4", "answerText": "Battle of Sui Zhou", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "What significant reform did Taizong implement?",
+        "answers": [
+          {"id": "a1", "answerText": "Creation of a bureaucratic examination system", "score": 1},
+          {"id": "a2", "answerText": "Abolition of all taxes", "score": 0},
+          {"id": "a3", "answerText": "Expansion of Chinese territory", "score": 0},
+          {"id": "a4", "answerText": "Elimination of the feudal system", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "Which philosophical approach influenced Taizong's poetry?",
+        "answers": [
+          {"id": "a1", "answerText": "Taoism", "score": 1},
+          {"id": "a2", "answerText": "Confucianism", "score": 0},
+          {"id": "a3", "answerText": "Buddhism", "score": 0},
+          {"id": "a4", "answerText": "Legalism", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz3",
+    "title": "Cultural Achievements of the Tang Dynasty",
+    "description": "A test on the cultural and artistic achievements of the period.",
+    "dificulty": 3,
+    "category": "Culture",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which poet became famous for his works during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Li Bai", "score": 1},
+          {"id": "a2", "answerText": "Du Fu", "score": 0},
+          {"id": "a3", "answerText": "Cao Cao", "score": 0},
+          {"id": "a4", "answerText": "Xu Xiao", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "Which style of ceramics became famous during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Earthenware", "score": 0},
+          {"id": "a2", "answerText": "Porcelain", "score": 1},
+          {"id": "a3", "answerText": "Glass", "score": 0},
+          {"id": "a4", "answerText": "Metallic ceramics", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What form of poetry was popular during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Ci", "score": 0},
+          {"id": "a2", "answerText": "Shi", "score": 1},
+          {"id": "a3", "answerText": "Xue", "score": 0},
+          {"id": "a4", "answerText": "Jiu", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz4",
+    "title": "A Woman on the Throne",
+    "description": "A test on the reign of Wu Zetian, the first female emperor of China.",
+    "dificulty": 2,
+    "category": "Politics",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What title did Wu Zetian hold?",
+        "answers": [
+          {"id": "a1", "answerText": "Empress", "score": 1},
+          {"id": "a2", "answerText": "Princess", "score": 0},
+          {"id": "a3", "answerText": "Concubine", "score": 0},
+          {"id": "a4", "answerText": "Dowager Empress", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "When did Wu Zetian declare herself emperor?",
+        "answers": [
+          {"id": "a1", "answerText": "690 AD", "score": 1},
+          {"id": "a2", "answerText": "670 AD", "score": 0},
+          {"id": "a3", "answerText": "700 AD", "score": 0},
+          {"id": "a4", "answerText": "610 AD", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "Which religion did Wu Zetian patronize?",
+        "answers": [
+          {"id": "a1", "answerText": "Buddhism", "score": 1},
+          {"id": "a2", "answerText": "Taoism", "score": 0},
+          {"id": "a3", "answerText": "Confucianism", "score": 0},
+          {"id": "a4", "answerText": "Legalism", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz5",
+    "title": "The Fall of the Tang Dynasty",
+    "description": "A test on the causes and consequences of the fall of the Tang Dynasty.",
+    "dificulty": 3,
+    "category": "History",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What rebellion was a major factor in the fall of the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "An Lushan Rebellion", "score": 1},
+          {"id": "a2", "answerText": "Huang Chao Rebellion", "score": 0},
+          {"id": "a3", "answerText": "Chang'an Mutiny", "score": 0},
+          {"id": "a4", "answerText": "Taiping Rebellion", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "How did internal conflicts impact the fall of the dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Strengthened feudalism", "score": 1},
+          {"id": "a2", "answerText": "Reduced the influence of Confucianism", "score": 0},
+          {"id": "a3", "answerText": "Increased army size", "score": 0},
+          {"id": "a4", "answerText": "Decreased population", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What event occurred in 907 AD?",
+        "answers": [
+          {"id": "a1", "answerText": "Fall of the Tang Dynasty", "score": 1},
+          {"id": "a2", "answerText": "Establishment of the Song Dynasty", "score": 0},
+          {"id": "a3", "answerText": "Beginning of the Ming Dynasty", "score": 0},
+          {"id": "a4", "answerText": "Establishment of the Jin Dynasty", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz6",
+    "title": "Innovations of the Tang Dynasty",
+    "description": "A test on technological and cultural innovations during the Tang Dynasty.",
+    "dificulty": 2,
+    "category": "Science & Technology",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What significant invention was developed during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Woodblock printing", "score": 1},
+          {"id": "a2", "answerText": "Paper making", "score": 0},
+          {"id": "a3", "answerText": "The compass", "score": 0},
+          {"id": "a4", "answerText": "Gunpowder", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "Which medical text was compiled during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "The Inner Canon of Huangdi", "score": 1},
+          {"id": "a2", "answerText": "The Yellow Emperor's Classic of Medicine", "score": 0},
+          {"id": "a3", "answerText": "Compendium of Materia Medica", "score": 0},
+          {"id": "a4", "answerText": "Treatise on Cold Damage", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What type of poetry was standardized during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Lushi", "score": 1},
+          {"id": "a2", "answerText": "Quatrain", "score": 0},
+          {"id": "a3", "answerText": "Ci", "score": 0},
+          {"id": "a4", "answerText": "Jueju", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz7",
+    "title": "Trade and Economy of the Tang Dynasty",
+    "description": "A test on the economic policies and trade routes of the Tang Dynasty.",
+    "dificulty": 3,
+    "category": "Economics",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What was the primary trade route during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Silk Road", "score": 1},
+          {"id": "a2", "answerText": "Maritime Route", "score": 0},
+          {"id": "a3", "answerText": "Tea Horse Road", "score": 0},
+          {"id": "a4", "answerText": "Spice Route", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "Which commodity was highly sought after by traders during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Silk", "score": 1},
+          {"id": "a2", "answerText": "Gold", "score": 0},
+          {"id": "a3", "answerText": "Rice", "score": 0},
+          {"id": "a4", "answerText": "Cotton", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What currency was commonly used in the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Cowry shells", "score": 0},
+          {"id": "a2", "answerText": "Copper coins", "score": 1},
+          {"id": "a3", "answerText": "Silver ingots", "score": 0},
+          {"id": "a4", "answerText": "Gold coins", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz8",
+    "title": "Military of the Tang Dynasty",
+    "description": "A test on the military strategies and battles of the Tang Dynasty.",
+    "dificulty": 2,
+    "category": "Military",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What was a key military innovation of the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Use of cavalry", "score": 1},
+          {"id": "a2", "answerText": "Siege weapons", "score": 0},
+          {"id": "a3", "answerText": "Gunpowder bombs", "score": 0},
+          {"id": "a4", "answerText": "Iron-clad ships", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "Which major battle marked a significant Tang victory?",
+        "answers": [
+          {"id": "a1", "answerText": "Battle of Talas", "score": 1},
+          {"id": "a2", "answerText": "Battle of Red Cliffs", "score": 0},
+          {"id": "a3", "answerText": "Battle of Guandu", "score": 0},
+          {"id": "a4", "answerText": "Battle of Yamen", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What was the primary reason for the Tang Dynasty's military expansion?",
+        "answers": [
+          {"id": "a1", "answerText": "Trade control", "score": 1},
+          {"id": "a2", "answerText": "Territorial disputes", "score": 0},
+          {"id": "a3", "answerText": "Religious conversion", "score": 0},
+          {"id": "a4", "answerText": "Population growth", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz9",
+    "title": "Religion and Philosophy of the Tang Dynasty",
+    "description": "A test on the major religions and philosophies during the Tang Dynasty.",
+    "dificulty": 3,
+    "category": "Religion & Philosophy",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which religion saw significant growth during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Buddhism", "score": 1},
+          {"id": "a2", "answerText": "Christianity", "score": 0},
+          {"id": "a3", "answerText": "Zoroastrianism", "score": 0},
+          {"id": "a4", "answerText": "Islam", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "What philosophy influenced Tang governance and society?",
+        "answers": [
+          {"id": "a1", "answerText": "Confucianism", "score": 1},
+          {"id": "a2", "answerText": "Taoism", "score": 0},
+          {"id": "a3", "answerText": "Legalism", "score": 0},
+          {"id": "a4", "answerText": "Buddhism", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What was a popular form of worship during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Ancestor worship", "score": 1},
+          {"id": "a2", "answerText": "Animal sacrifice", "score": 0},
+          {"id": "a3", "answerText": "Temple building", "score": 0},
+          {"id": "a4", "answerText": "Pilgrimage", "score": 0}
+        ]
+      }
+    ]
+  }
+,{
+    "id": "quiz10",
+    "title": "Legacy of the Tang Dynasty",
+    "description": "A test on the enduring impact of the Tang Dynasty on China and the world.",
+    "dificulty": 3,
+    "category": "History",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What was the Tang Dynasty's influence on future Chinese dynasties?",
+        "answers": [
+          {"id": "a1", "answerText": "Established cultural and political standards", "score": 1},
+          {"id": "a2", "answerText": "Eliminated all previous dynasties' influences", "score": 0},
+          {"id": "a3", "answerText": "Introduced feudalism", "score": 0},
+          {"id": "a4", "answerText": "Banned foreign trade", "score": 0}
+        ]
+      },
+      {
+        "id": "q2",
+        "question": "Which artistic style was popularized during the Tang Dynasty?",
+        "answers": [
+          {"id": "a1", "answerText": "Landscape painting", "score": 1},
+          {"id": "a2", "answerText": "Cubism", "score": 0},
+          {"id": "a3", "answerText": "Impressionism", "score": 0},
+          {"id": "a4", "answerText": "Abstract art", "score": 0}
+        ]
+      },
+      {
+        "id": "q3",
+        "question": "What lasting impact did the Tang Dynasty have on poetry?",
+        "answers": [
+          {"id": "a1", "answerText": "Set a standard for Chinese poetry", "score": 1},
+          {"id": "a2", "answerText": "Eliminated previous poetic forms", "score": 0},
+          {"id": "a3", "answerText": "Introduced Western styles", "score": 0},
+          {"id": "a4", "answerText": "Banned poetry writing", "score": 0}
+        ]
+      }
+    ]
+  }
+                  
+  ]

@@ -1,3 +1,7 @@
+import 'package:dynasty_dive/src/feature/home/bloc/home_bloc.dart';
+import 'package:dynasty_dive/src/feature/lesson/bloc/lesson_bloc.dart';
+import 'package:dynasty_dive/src/feature/notions/bloc/notion_bloc.dart';
+import 'package:dynasty_dive/src/feature/quizess/bloc/test_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,7 +16,19 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-     
+        BlocProvider(
+          create: (context) => LessonBloc()..add(LoadLessonEvent()),
+        ),
+        BlocProvider(
+          create: (context) => NotionBloc()..add(LoadNotions()),
+        ),
+          BlocProvider(
+          create: (context) => HomeBloc()..add(HomeLoadedEvent()),
+        ),
+          BlocProvider(
+          create: (context) => TestBloc()..add(LoadTestsEvent()),
+        ),
+        
       ],
       child: CupertinoApp.router(
         theme: const CupertinoThemeData(

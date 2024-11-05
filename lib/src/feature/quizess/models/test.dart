@@ -15,7 +15,6 @@ class Test {
   bool isComplete;
   bool isOpen;
   int currentQuestionIndex;
-
   TestResult? result;
 
   Test({
