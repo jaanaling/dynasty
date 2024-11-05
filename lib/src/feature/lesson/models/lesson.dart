@@ -9,8 +9,8 @@ class Lesson {
   final String description; // Краткое описание урока
   final List<String>? topics; // Список тем, охватываемых в уроке (например, культура, экономика)
   final String content; // Полный текст урока
-   bool? isCompleted; // Статус прохождения урока (true, если пройден)
-   bool? isBookmarked; // Статус закладки
+   bool isCompleted; // Статус прохождения урока (true, если пройден)
+   bool isBookmarked; // Статус закладки
   final List<String>? highlightedTexts; // Список выделенных текстов для заметок
   final List<String>? relatedDates; // Список связанных дат
   final List<String>? relatedPeople; // Список связанных исторических личностей
@@ -82,8 +82,8 @@ class Lesson {
       description: map['description'] as String,
       topics: map['topics'] != null ? List<String>.from(map['topics'] as List<String>) : null,
       content: map['content'] as String,
-      isCompleted: map['isCompleted'] != null ? map['isCompleted'] as bool : null,
-      isBookmarked: map['isBookmarked'] != null ? map['isBookmarked'] as bool : null,
+      isCompleted: map['isCompleted'] != null ? map['isCompleted'] as bool : false,
+      isBookmarked: map['isBookmarked'] != null ? map['isBookmarked'] as bool : false,
       highlightedTexts: map['highlightedTexts'] != null ? List<String>.from(map['highlightedTexts'] as List<String>) : null,
       relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<String>) : null,
       relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<String>) : null,

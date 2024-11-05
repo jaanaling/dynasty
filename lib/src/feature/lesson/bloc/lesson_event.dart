@@ -19,7 +19,6 @@ class CompliteLessonEvent extends LessonEvent {
   final String lessonId;
   final List<Test>? tests;
 
-
   const CompliteLessonEvent({
     required this.lessonBlock,
     required this.lessonId,
@@ -28,4 +27,19 @@ class CompliteLessonEvent extends LessonEvent {
 
   @override
   List<Object> get props => [lessonBlock, lessonId, tests ?? []];
+}
+
+class SwitchedBookmarkedLessonEvent extends LessonEvent {
+  final LessonBlock lessonBlock;
+  final String? lessonId;
+
+  const SwitchedBookmarkedLessonEvent({
+    required this.lessonBlock,
+     this.lessonId,
+  });
+  @override
+  List<Object> get props => [
+        lessonBlock,
+        lessonId ?? '',
+      ];
 }

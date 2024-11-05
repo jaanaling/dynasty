@@ -22,13 +22,12 @@ class AppRoot extends StatelessWidget {
         BlocProvider(
           create: (context) => NotionBloc()..add(LoadNotions()),
         ),
-          BlocProvider(
+        BlocProvider(
           create: (context) => HomeBloc()..add(HomeLoadedEvent()),
         ),
-          BlocProvider(
+        BlocProvider(
           create: (context) => TestBloc()..add(LoadTestsEvent()),
         ),
-        
       ],
       child: CupertinoApp.router(
         theme: const CupertinoThemeData(
@@ -36,7 +35,7 @@ class AppRoot extends StatelessWidget {
           primaryColor: const Color(0xFF56FFCF),
           textTheme: CupertinoTextThemeData(
             textStyle: TextStyle(
-              fontFamily: 'Poppins',
+              fontFamily: 'AA Stetica',
               fontWeight: FontWeight.w400,
               fontSize: 20,
             ),

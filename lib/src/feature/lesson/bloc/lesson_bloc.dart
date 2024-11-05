@@ -33,6 +33,30 @@ class LessonBloc extends Bloc<LessonEvent, LessonState> {
         place: place,
       ));
     });
+
+    on<SwitchedBookmarkedLessonEvent>((event, emit) async {
+      if (event.lessonId == null) {
+        event.lessonBlock.isBookmarked = !event.lessonBlock.isBookmarked;
+        await repository.updateLessons(event.lessonBlock);
+      } else {
+        final lesson = event.lessonBlock.lessons.firstWhere(
+          (lesson) => lesson.id == event.lessonId,
+          orElse: () => throw Exception('Lesson not found'),
+        );
+        lesson.isBookmarked = !lesson.isBookmarked;
+        await repository.updateLessons(event.lessonBlock);
+      }
+
+      final lessons = await repository.loadLessons();
+
+      emit(TestLoadedState(
+        lesson: lessons,
+        date: (state as TestLoadedState).date,
+        event: (state as TestLoadedState).event,
+        figure: (state as TestLoadedState).figure,
+        place: (state as TestLoadedState).place,
+      ));
+    });
     on<CompliteLessonEvent>((event, emit) async {
       event.lessonBlock.completedLessonsCount++;
 
