@@ -10,6 +10,7 @@ class AppTile extends StatelessWidget {
   final Widget? subtitle;
   final Widget? trailing;
   bool? generateColor;
+  int? id;
   Color? color;
 
   AppTile({
@@ -20,6 +21,7 @@ class AppTile extends StatelessWidget {
     this.trailing,
     this.generateColor = false,
     this.color,
+    this.id,
   });
 
   @override
@@ -28,11 +30,10 @@ class AppTile extends StatelessWidget {
       generateColor = true;
     }
     if (color == null && generateColor == true) {
-      color = Colors.primaries[Random().nextInt(Colors.primaries.length)];
+      int index = id! % 17;
+      color = Colors.primaries[index]; // Используем asciiSum как индекс
     }
-
     return Container(
- 
       decoration: ShapeDecoration(
         gradient: LinearGradient(
           begin: const Alignment(0.99, -0.16),
@@ -55,7 +56,8 @@ class AppTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 17, vertical: subtitle != null ? 14 : 28),
+            padding: EdgeInsets.symmetric(
+                horizontal: 17, vertical: subtitle != null ? 14 : 28),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,

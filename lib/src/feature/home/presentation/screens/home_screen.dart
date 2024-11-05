@@ -7,10 +7,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(children: [
-      AppTile(title: "title"),
-      AppTile(title: "title", subtitle: Text("subtitle"),),
-      AppTile(title: "title", subtitle: Text("subtitle"), trailing: Icon(Icons.add, size: 30),),
-    ],);
+    return  Container();
   }
 }
