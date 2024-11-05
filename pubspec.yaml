@@ -23,6 +23,7 @@ dependencies:
     sdk: flutter
   share_plus: ^10.1.1
   equatable: ^2.0.5
+  percent_indicator: ^4.2.3
 
 
 
@@ -39,11 +40,11 @@ flutter:
     - assets/json/
     - assets/fonts/
   fonts:
-    - family: Stetica
+    - family: 'Stetica'
       fonts:
-        - asset: assets/fonts/AA Stetica Medium.otf
+        - asset: assets/fonts/AA 'Stetica' Medium.otf
           weight: 500
-        - asset: assets/fonts/AA Stetica Regular.otf
+        - asset: assets/fonts/AA 'Stetica' Regular.otf
           weight: 400
-        - asset: assets/fonts/AA Stetica Light Italic.otf
+        - asset: assets/fonts/AA 'Stetica' Light Italic.otf
           weight: 300

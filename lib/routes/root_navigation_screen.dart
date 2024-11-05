@@ -25,7 +25,7 @@ class _RootNavigationScreenState extends State<RootNavigationScreen> {
       resizeToAvoidBottomInset: false,
       child: Stack(
         children: [
-          Container(color: Color(0xFFFFFFFF), child: widget.navigationShell),
+          widget.navigationShell,
           Positioned(bottom: 0, right: 0, left: 0, child: BottomBar(selectedIndex: currentIndex, onTap: _onTap,)),
         ],
       ),

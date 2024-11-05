@@ -4,7 +4,7 @@ enum IconProvider {
   quiz(imageName: 'quiz.svg'),
   tips(imageName: 'tips.svg'),
   logo(imageName: 'logo.png'),
-  historicalFigure(imageName: 'historical_figure.png'),
+  historicalFigure(imageName: 'historical figures.png'),
   places(imageName: 'places.png'),
   culture(imageName: 'culture.png'),
   dynasties(imageName: 'dynasties.png'),

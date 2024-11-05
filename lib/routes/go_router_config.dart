@@ -40,7 +40,7 @@ GoRouter buildGoRouter = GoRouter(
             GoRoute(
               path: RouteValue.home.path,
               builder: (context, state) => Container(
-                color: Colors.white,
+                color: Color(0xFF353535),
                 child: HomeScreen(key: UniqueKey()),
               ),
             ),
@@ -52,21 +52,21 @@ GoRouter buildGoRouter = GoRouter(
             GoRoute(
                 path: RouteValue.sections.path,
                 builder: (context, state) => Container(
-                      color: Colors.white,
+                      color: Color(0xFF353535),
                       child: SectionsScreen(key: UniqueKey()),
                     ),
                 routes: [
                   GoRoute(
                       path: RouteValue.lessons.path,
                       builder: (context, state) => Container(
-                            color: Colors.white,
+                            color: Color(0xFF353535),
                             child: LessonsScreen(key: UniqueKey()),
                           ),
                       routes: [
                         GoRoute(
                           path: RouteValue.lesson.path,
                           builder: (context, state) => Container(
-                            color: Colors.white,
+                            color: Color(0xFF353535),
                             child: LessonScreen(key: UniqueKey()),
                           ),
                         ),
@@ -80,21 +80,21 @@ GoRouter buildGoRouter = GoRouter(
             GoRoute(
                 path: RouteValue.quizess.path,
                 builder: (context, state) => Container(
-                      color: Colors.white,
+                      color: Color(0xFF353535),
                       child: QuizessScreen(key: UniqueKey()),
                     ),
                 routes: [
                   GoRoute(
                     path: RouteValue.quiz.path,
                     builder: (context, state) => Container(
-                      color: Colors.white,
+                      color: Color(0xFF353535),
                       child: QuizScreen(key: UniqueKey()),
                     ),
                   ),
                   GoRoute(
                     path: RouteValue.quizResult.path,
                     builder: (context, state) => Container(
-                      color: Colors.white,
+                      color: Color(0xFF353535),
                       child: ResultScreen(key: UniqueKey()),
                     ),
                   ),
@@ -107,7 +107,7 @@ GoRouter buildGoRouter = GoRouter(
             GoRoute(
               path: RouteValue.notions.path,
               builder: (context, state) => Container(
-                color: Colors.white,
+                color: Color(0xFF353535),
                 child: NotionsScreen(key: UniqueKey()),
               ),
             ),

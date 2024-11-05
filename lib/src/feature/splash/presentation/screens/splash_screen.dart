@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:dynasty_dive/routes/route_value.dart';
+import 'package:dynasty_dive/src/core/utils/app_icon.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter/material.dart';
@@ -32,16 +36,16 @@ class _SplashScreenState extends State<SplashScreen>
 
   Future<void> startLoading(BuildContext context) async {
     await Future.delayed(const Duration(milliseconds: 1000));
-
-    // final adId = await AdvertisingId.id(true);
-    // FirebaseMessaging instance = FirebaseMessaging.instance;
-    // final settings =
-    //     await instance.requestPermission(alert: true, badge: true, sound: true);
-    // if (settings.authorizationStatus != AuthorizationStatus.authorized) {
-    //   SharedPreferences.getInstance()
-    //       .then((prefs) => prefs.setBool('notificationsEnabled', false));
-    // }
-
+    //
+    // // final adId = await AdvertisingId.id(true);
+    // // FirebaseMessaging instance = FirebaseMessaging.instance;
+    // // final settings =
+    // //     await instance.requestPermission(alert: true, badge: true, sound: true);
+    // // if (settings.authorizationStatus != AuthorizationStatus.authorized) {
+    // //   SharedPreferences.getInstance()
+    // //       .then((prefs) => prefs.setBool('notificationsEnabled', false));
+    // // }
+    //
     context.go(RouteValue.home.path);
   }
 
@@ -59,45 +63,57 @@ class _SplashScreenState extends State<SplashScreen>
       alignment: Alignment.center,
       children: [
         const DecoratedBox(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [
-                Colors.white,
-                Color(0xFFF570AF),
-              ],
-            ),
-          ),
+          decoration: BoxDecoration(color: Color(0xFF141414)),
           child: SizedBox.expand(),
         ),
-        Positioned.fill(
-          child: Image.asset(
-            'assets/images/splash.png',
-            width: double.infinity,
-            fit: BoxFit.fill,
-          ),
-        ),
         Positioned(
-          top: height * 0.295,
+          top: height * 0.34,
           child: Column(
             children: [
-              Image.asset(
-                IconProvider.logo.buildImageUrl(),
-                fit: BoxFit.fitWidth,
-                width: width * 0.64,
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    width: 175,
+                    height: 175,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFFDF3E3E),
+                    ),
+                  ),
+                  BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 40, sigmaY: 40),
+                    child: Container(
+                      width: 175,
+                      height: 175,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  AppIcon(asset: IconProvider.logo.buildImageUrl()),
+                ],
               ),
-              const Text(
-                'Big Bass Diary',
+              Text(
+                'Dynasty Dive',
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 37,
-                    fontWeight: FontWeight.bold),
-              )
+                  color: Colors.white,
+                  fontSize: 29,
+                  fontFamily: 'Stetica',
+                  height: 0,
+                ),
+              ),
             ],
           ),
         ),
-      
+        Positioned(
+          bottom: height * 0.11,
+          child: Transform.scale(
+            scale: 2.0,
+            child: CupertinoActivityIndicator(color: Color(0xFFDF3E3E),),
+          ),
+        )
       ],
     );
   }
