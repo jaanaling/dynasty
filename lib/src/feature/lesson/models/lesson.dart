@@ -80,14 +80,14 @@ class Lesson {
       id: map['id'] as String,
       title: map['title'] as String,
       description: map['description'] as String,
-      topics: map['topics'] != null ? List<String>.from(map['topics'] as List<String>) : null,
+      topics: map['topics'] != null ? List<String>.from(map['topics'] as List<dynamic>) : null,
       content: map['content'] as String,
       isCompleted: map['isCompleted'] != null ? map['isCompleted'] as bool : false,
       isBookmarked: map['isBookmarked'] != null ? map['isBookmarked'] as bool : false,
-      highlightedTexts: map['highlightedTexts'] != null ? List<String>.from(map['highlightedTexts'] as List<String>) : null,
-      relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<String>) : null,
-      relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<String>) : null,
-      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<String>) : null,
+      highlightedTexts: map['highlightedTexts'] != null ? List<String>.from(map['highlightedTexts'] as List<dynamic>) : null,
+      relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<dynamic>) : null,
+      relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<dynamic>) : null,
+      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<dynamic>) : null,
     );
   }
 

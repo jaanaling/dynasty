@@ -81,12 +81,11 @@ class Test {
       title: map['title'] as String,
       dificulty: map['dificulty'] as int,
       description: map['description'] as String,
-      questions: List<TestQuestion>.from((map['questions'] as List<int>).map<TestQuestion>((x) => TestQuestion.fromMap(x as Map<String,dynamic>),),),
+      questions: List<TestQuestion>.from((map['questions'] as List<dynamic>).map<TestQuestion>((x) => TestQuestion.fromMap(x as Map<String,dynamic>),),),
       category: map['category'] as String,
-      isComplete: map['isComplete'] as bool,
-
-      isOpen: map['isOpen'] as bool,
-      currentQuestionIndex: map['currentQuestionIndex'] as int,
+      isComplete: map['isComplete'] != null ? map['isComplete'] as bool : false,
+      isOpen: map['isOpen'] != null ? map['isOpen'] as bool : false,
+      currentQuestionIndex:map['currentQuestionIndex'] != null ? map['currentQuestionIndex'] as int : 0,
       result: map['result'] != null ? TestResult.fromMap(map['result'] as Map<String,dynamic>) : null,
     );
   }

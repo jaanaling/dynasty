@@ -1,5 +1,8 @@
+import 'package:dynasty_dive/src/feature/home/presentation/screens/facts_screen.dart';
 import 'package:dynasty_dive/src/feature/home/presentation/screens/home_screen.dart';
+import 'package:dynasty_dive/src/feature/lesson/models/lesson_bloc.dart';
 import 'package:dynasty_dive/src/feature/notions/presentation/screens/notions_screen.dart';
+import 'package:dynasty_dive/src/feature/quizess/models/test.dart';
 import 'package:dynasty_dive/src/feature/quizess/presentation/screens/quiz_screen.dart';
 import 'package:dynasty_dive/src/feature/quizess/presentation/screens/quizess_screen.dart';
 import 'package:dynasty_dive/src/feature/quizess/presentation/screens/result_screen.dart';
@@ -43,6 +46,16 @@ GoRouter buildGoRouter = GoRouter(
                 color: Color(0xFF353535),
                 child: HomeScreen(key: UniqueKey()),
               ),
+              routes: <RouteBase>[
+                GoRoute(
+                  path: RouteValue.facts.path,
+                  builder: (context, state) => Container(
+                    color: Color(0xFF353535),
+                    child: FactsScreen(
+                        key: UniqueKey(), type: state.extra as String),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -58,18 +71,32 @@ GoRouter buildGoRouter = GoRouter(
                 routes: [
                   GoRoute(
                       path: RouteValue.lessons.path,
-                      builder: (context, state) => Container(
-                            color: Color(0xFF353535),
-                            child: LessonsScreen(key: UniqueKey()),
-                          ),
+                      builder: (context, state) {
+                        final lessons = state.extra as LessonBlock;
+                        return Container(
+                          color: Color(0xFF353535),
+                          child:
+                              LessonsScreen(key: UniqueKey(), lessons: lessons),
+                        );
+                      },
                       routes: [
                         GoRoute(
-                          path: RouteValue.lesson.path,
-                          builder: (context, state) => Container(
-                            color: Color(0xFF353535),
-                            child: LessonScreen(key: UniqueKey()),
-                          ),
-                        ),
+                            path: RouteValue.lesson.path,
+                            builder: (context, state) {
+                              final extra = state.extra as Map<String, dynamic>;
+
+                              final lessonId = extra['lessonId'] as String;
+                              final lessonBlock =
+                                  extra['lessonBlock'] as LessonBlock;
+
+                              return Container(
+                                color: Color(0xFF353535),
+                                child: LessonScreen(
+                                    key: UniqueKey(),
+                                    lessons: lessonBlock,
+                                    id: lessonId),
+                              );
+                            }),
                       ]),
                 ]),
           ],
@@ -95,7 +122,8 @@ GoRouter buildGoRouter = GoRouter(
                     path: RouteValue.quizResult.path,
                     builder: (context, state) => Container(
                       color: Color(0xFF353535),
-                      child: ResultScreen(key: UniqueKey()),
+                      child: ResultScreen(
+                          key: UniqueKey(), test: state.extra as Test),
                     ),
                   ),
                 ]),

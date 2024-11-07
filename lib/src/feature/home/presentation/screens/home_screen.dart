@@ -1,10 +1,15 @@
+import 'package:dynasty_dive/routes/route_value.dart';
 import 'package:dynasty_dive/src/core/utils/app_icon.dart';
 import 'package:dynasty_dive/src/core/utils/icon_provider.dart';
+import 'package:dynasty_dive/src/feature/home/presentation/screens/facts_screen.dart';
+import 'package:dynasty_dive/src/feature/notions/bloc/notion_bloc.dart';
+import 'package:dynasty_dive/src/feature/notions/models/notion.dart';
 import 'package:dynasty_dive/ui_kit/lesson_tile/lesson_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import '../../bloc/home_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -26,7 +31,6 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
-                      fontFamily: 'Stetica',
                       height: 0,
                     ),
                   ),
@@ -38,7 +42,6 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Container(
                           width: double.infinity,
-                          height: 109,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(21),
                             boxShadow: [
@@ -47,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                                 blurRadius: 4,
                                 offset: Offset(0, 4),
                                 spreadRadius: 0,
-                              )
+                              ),
                             ],
                           ),
                           child: ClipRRect(
@@ -56,49 +59,31 @@ class HomeScreen extends StatelessWidget {
                               width: double.infinity,
                               fit: BoxFit.fitWidth,
                               asset: state.daily.image,
-                              color: Color(0xFFDF3E3E),
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 23),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Gap(6),
-                              Text(
-                                'Fact of the day',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  fontFamily: 'Stetica',
-                                  height: 0,
-                                  shadows: [
-                                    Shadow(
-                                      color: Colors.black
-                                          .withOpacity(0.5), // Цвет тени
-                                      offset: Offset(2.0, 2.0), // Смещение тени
-                                      blurRadius: 4.0, // Размытие тени
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Gap(8),
-                              SizedBox(
-                                height: 80,
-                                child: Text(
-                                  state.daily.title,
-                                  textAlign: TextAlign.center,
-                                  maxLines:
-                                      2, // Устанавливает максимальное количество строк
-                                  overflow: TextOverflow
-                                      .ellipsis, // Указывает, как обрабатывать переполнение
-                                  softWrap: true, // Разрешает перенос слов
+                        CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          onPressed: () => showLessonDialog(
+                            context,
+                            state.daily.title,
+                            state.daily.content,
+                            null,
+                            null,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 23),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Gap(6),
+                                Text(
+                                  'Fact of the day',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 24,
-                                    fontWeight: FontWeight.w500,
                                     fontFamily: 'Stetica',
+                                    height: 0,
                                     shadows: [
                                       Shadow(
                                         color: Colors.black
@@ -110,8 +95,36 @@ class HomeScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                              ),
-                            ],
+                                Gap(8),
+                                SizedBox(
+                                  height: 80,
+                                  child: Text(
+                                    state.daily.title,
+                                    textAlign: TextAlign.center,
+                                    maxLines:
+                                        2, // Устанавливает максимальное количество строк
+                                    overflow: TextOverflow
+                                        .ellipsis, // Указывает, как обрабатывать переполнение
+                                    softWrap: true, // Разрешает перенос слов
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: 'Stetica',
+                                      shadows: [
+                                        Shadow(
+                                          color: Colors.black
+                                              .withOpacity(0.5), // Цвет тени
+                                          offset:
+                                              Offset(2.0, 2.0), // Смещение тени
+                                          blurRadius: 4.0, // Размытие тени
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -123,26 +136,54 @@ class HomeScreen extends StatelessWidget {
                       runSpacing: 15,
                       children: [
                         buildLesson(
-                            iconUrl: IconProvider.dynasties.buildImageUrl(),
-                            color: Color(0xFF93D650),
-                            onPressed: () {},
-                            title: 'Dynasties'),
+                          iconUrl: IconProvider.dynasties.buildImageUrl(),
+                          color: Color(0xFF93D650),
+                          onPressed: () {
+                            context.push(
+                              "${RouteValue.home.path}/${RouteValue.facts.path}",
+                              extra: 'Dates',
+                            );
+                          },
+                          title: 'Dates',
+                          context: context,
+                        ),
                         buildLesson(
-                            iconUrl: IconProvider.culture.buildImageUrl(),
-                            color: Color(0xFFEE9E4F),
-                            onPressed: () {},
-                            title: 'Culture'),
+                          iconUrl: IconProvider.culture.buildImageUrl(),
+                          color: Color(0xFFEE9E4F),
+                          onPressed: () {
+                            context.push(
+                              "${RouteValue.home.path}/${RouteValue.facts.path}",
+                              extra: 'Events',
+                            );
+                          },
+                          title: 'Events',
+                          context: context,
+                        ),
                         buildLesson(
-                            iconUrl:
-                                IconProvider.historicalFigure.buildImageUrl(),
-                            color: Color(0xFFB550D6),
-                            onPressed: () {},
-                            title: 'Historical\nfigures'),
+                          iconUrl:
+                              IconProvider.historicalFigure.buildImageUrl(),
+                          color: Color(0xFFB550D6),
+                          onPressed: () {
+                            context.push(
+                              "${RouteValue.home.path}/${RouteValue.facts.path}",
+                              extra: 'Historical\nfigures',
+                            );
+                          },
+                          title: 'Historical\nfigures',
+                          context: context,
+                        ),
                         buildLesson(
-                            iconUrl: IconProvider.places.buildImageUrl(),
-                            color: Color(0xFF508FD6),
-                            onPressed: () {},
-                            title: 'Places'),
+                          iconUrl: IconProvider.places.buildImageUrl(),
+                          color: Color(0xFF508FD6),
+                          onPressed: () {
+                            context.push(
+                              "${RouteValue.home.path}/${RouteValue.facts.path}",
+                              extra: 'Places',
+                            );
+                          },
+                          title: 'Places',
+                          context: context,
+                        ),
                       ],
                     ),
                   ),
@@ -161,19 +202,21 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildLesson(
-      {required String iconUrl,
-      required Color color,
-      required VoidCallback onPressed,
-      required String title}) {
+  Widget buildLesson({
+    required String iconUrl,
+    required Color color,
+    required VoidCallback onPressed,
+    required String title,
+    required BuildContext context,
+  }) {
     return CupertinoButton(
       padding: EdgeInsets.zero,
       onPressed: onPressed,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(21),
         child: Container(
-          width: 159,
-          height: 159,
+          width: MediaQuery.of(context).size.width * 0.4,
+          height: MediaQuery.of(context).size.width * 0.4,
           decoration: ShapeDecoration(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(21),
@@ -207,7 +250,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

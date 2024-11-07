@@ -44,13 +44,13 @@ class TestBloc extends Bloc<TestEvent, TestState> {
     if (state.currentTest != null) {
       final tests = await testRepository.getAllTests();
       final currentTest =
-          tests.where((t) => t.id == event.testId.toString()).first;
+          tests.where((t) => t.id == event.testId).first;
       logger.d(currentTest);
       final currentIndex = currentTest.currentQuestionIndex + 1;
 
       // Обновляем прогресс теста и добавляем очки
       await testRepository.updateTestProgress(
-        int.parse(currentTest.id),
+        currentTest.id,
         event.score,
       );
       logger.d(currentTest);
@@ -68,14 +68,14 @@ class TestBloc extends Bloc<TestEvent, TestState> {
       } else {
         // Сохраняем результат по завершении теста
         await testRepository.saveUserTestResult(
-          int.parse(currentTest.id),
+          currentTest.id,
           event.score,
            );
 
         final tests = await testRepository.getAllTests();
 
         event.context.pushReplacement(
-          '${RouteValue.quizess.path}/${RouteValue.quiz.path}',
+          '${RouteValue.quizess.path}/${RouteValue.quizResult.path}',
           extra: tests.firstWhere(
             (test) => test.id == currentTest.id,
           ),
@@ -108,7 +108,7 @@ class TestBloc extends Bloc<TestEvent, TestState> {
     ResetTestEvent event,
     Emitter<TestState> emit,
   ) async {
-    await testRepository.resetTest(int.parse(event.test.id));
+    await testRepository.resetTest(event.test.id);
 
     final tests = await testRepository.getAllTests();
 
@@ -121,7 +121,7 @@ class TestBloc extends Bloc<TestEvent, TestState> {
       TestLoadedState(
         tests: tests,
         currentTest: tests.firstWhere(
-          (test) => test.id == int.parse(event.test.id).toString(),
+          (test) => test.id == event.test.id,
         ),
       ),
     );

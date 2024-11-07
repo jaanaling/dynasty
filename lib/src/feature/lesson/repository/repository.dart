@@ -16,7 +16,7 @@ class LessonRepository {
 
   Future<void> updateLessons(LessonBlock updatedLesson) async {
     return JsonLoader.modifyDataList<LessonBlock>(
-      'diary',
+      'lesson',
       updatedLesson,
       () async =>
           await loadLessons(), // Теперь это корректно возвращает Future<List<LessonBlock>>

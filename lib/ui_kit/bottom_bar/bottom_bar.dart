@@ -3,22 +3,22 @@ import 'package:dynasty_dive/src/core/utils/icon_provider.dart';
 import 'package:dynasty_dive/ui_kit/app_icon/widget/app_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'dart:math' as math;
+
 
 import '../../routes/route_value.dart';
 
 class BottomBar extends StatefulWidget {
-  final int selectedIndex;
+
   final void Function(int) onTap;
   const BottomBar(
-      {super.key, required this.selectedIndex, required this.onTap});
+      {super.key, required this.onTap});
 
   @override
   State<BottomBar> createState() => _BottomBarState();
 }
 
 class _BottomBarState extends State<BottomBar> {
-  int _currentIndex = 1;
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class _BottomBarState extends State<BottomBar> {
                         index: 1,
                         iconUrl: IconProvider.lessons.buildImageUrl(),
                         onPressed: () {
-                          context.go(RouteValue.lessons.path);
+                          context.go(RouteValue.sections.path);
                           _onItemTapped(1);
                         },
                       ),

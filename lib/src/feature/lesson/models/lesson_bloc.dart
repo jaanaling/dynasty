@@ -71,12 +71,12 @@ class LessonBlock {
       id: map['id'] as String,
       title: map['title'] as String,
       description: map['description'] as String,
-      lessons: List<Lesson>.from((map['lessons'] as List<int>).map<Lesson>((x) => Lesson.fromMap(x as Map<String,dynamic>),),),
-      completedLessonsCount: map['completedLessonsCount'] as int,
-      completedQuizzesCount: map['completedQuizzesCount'] as int,
-      earnedPoints: map['earnedPoints'] as int,
-      isBookmarked: map['isBookmarked'] as bool,
-      quizzesId: List<String>.from(map['quizzesId'] as List<String>),
+      lessons: List<Lesson>.from((map['lessons'] as List<dynamic>).map<Lesson>((x) => Lesson.fromMap(x as Map<String,dynamic>),),),
+      completedLessonsCount:  map['completedLessonsCount'] != null ? map['completedLessonsCount'] as int : 0,
+      completedQuizzesCount: map['completedQuizzesCount'] != null ? map['completedQuizzesCount'] as int : 0,
+      earnedPoints: map['earnedPoints'] != null ?map['earnedPoints'] as int : 0,
+      isBookmarked: map['isBookmarked'] != null? map['isBookmarked'] as bool : false,
+      quizzesId: List<String>.from(map['quizzesId'] as List<dynamic>),
     );
   }
 

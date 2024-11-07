@@ -54,9 +54,9 @@ class HistoricalDate {
       id: map['id'] as String,
       date: map['date'] != null ? map['date'] as String : null,
       description: map['description'] != null ? map['description'] as String : null,
-      relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<String>) : null,
-      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<String>) : null,
-      relatedEvents: map['relatedEvents'] != null ? List<String>.from(map['relatedEvents'] as List<String>) : null,
+      relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<dynamic>) : null,
+      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<dynamic>) : null,
+      relatedEvents: map['relatedEvents'] != null ? List<String>.from(map['relatedEvents'] as List<dynamic>) : null,
     );
   }
 

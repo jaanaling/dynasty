@@ -5,7 +5,7 @@ class NotionRepository {
   Future<List<Notion>> loadNotion() {
     return JsonLoader.loadData<Notion>(
       'notion',
-      '',
+      'assets/json/notion.json',
       (json) => Notion.fromMap(json),
     );
   }

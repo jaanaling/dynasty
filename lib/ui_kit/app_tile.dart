@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -10,7 +11,7 @@ class AppTile extends StatelessWidget {
   final Widget? subtitle;
   final Widget? trailing;
   bool? generateColor;
-  int? id;
+  int id;
   Color? color;
 
   AppTile({
@@ -21,7 +22,7 @@ class AppTile extends StatelessWidget {
     this.trailing,
     this.generateColor = false,
     this.color,
-    this.id,
+    required this.id,
   });
 
   @override
@@ -33,53 +34,63 @@ class AppTile extends StatelessWidget {
       int index = id! % 17;
       color = Colors.primaries[index]; // Используем asciiSum как индекс
     }
-    return Container(
-      decoration: ShapeDecoration(
-        gradient: LinearGradient(
-          begin: const Alignment(0.99, -0.16),
-          end: const Alignment(-0.99, 0.16),
-          colors: [color!, color!.withOpacity(0.5)],
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(21),
-        ),
-        shadows: const [
-          BoxShadow(
-            color: Color(0x3F000000),
-            blurRadius: 4,
-            offset: Offset(0, 4),
+    return CupertinoButton(
+      onPressed: onTap,
+      padding: EdgeInsets.zero,
+      child: Container(
+        decoration: ShapeDecoration(
+          gradient: LinearGradient(
+            begin: const Alignment(0.99, -0.16),
+            end: const Alignment(-0.99, 0.16),
+            colors: [color!, color!.withOpacity(0.5)],
           ),
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: 17, vertical: subtitle != null ? 14 : 28),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    height: 0,
-                  ),
-                ),
-                Gap(5),
-                subtitle ?? Container(),
-              ],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(21),
+          ),
+          shadows: const [
+            BoxShadow(
+              color: Color(0x3F000000),
+              blurRadius: 4,
+              offset: Offset(0, 4),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 30),
-            child: trailing ?? Container(),
-          ),
-        ],
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: 17, vertical: subtitle != null ? 14 : 28),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5 ,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        height: 0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Gap(5),
+                    subtitle ?? Container(),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.fromLTRB(0, 30, 17, 30),
+              child: trailing ?? Container(),
+            ),
+          ],
+        ),
       ),
     );
   }

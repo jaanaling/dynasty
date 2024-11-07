@@ -14,9 +14,10 @@ class JsonLoader {
     final jsonData = prefs.getString(key);
     if (jsonData != null) {
       final List<dynamic> decodedJson = jsonDecode(jsonData) as List<dynamic>;
-      return decodedJson
-          .map((json) => fromMap(json as Map<String, dynamic>))
-          .toList();
+     return decodedJson
+    .where((json) => json is Map<String, dynamic>)
+    .map((json) => fromMap(json as Map<String, dynamic>))
+    .toList();
     } else {
       final assetJson = await rootBundle.loadString(assetPath);
       prefs.setString(key, assetJson);

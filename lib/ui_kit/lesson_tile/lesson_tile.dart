@@ -5,7 +5,7 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class LessonTile extends StatelessWidget {
   final String title;
-  final VoidCallback onShare;
+  final Future<void> Function(String, GlobalKey<State<StatefulWidget>>) onShare;
   final VoidCallback onStart;
   final int completedLessons;
   final int lessonsCount;
@@ -26,13 +26,13 @@ class LessonTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey key = GlobalKey();
     return Stack(
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 16, right: 0),
           child: Container(
             width: double.infinity,
-            height: 163,
             decoration: ShapeDecoration(
               gradient: LinearGradient(
                 begin: Alignment(1.00, -0.09),
@@ -268,7 +268,8 @@ class LessonTile extends StatelessWidget {
             top: 2,
             right: 17,
             child: CupertinoButton(
-                onPressed: onShare,
+                key: key,
+                onPressed: () async => await onShare(title, key),
                 padding: EdgeInsets.zero,
                 child: Icon(
                   Icons.share,

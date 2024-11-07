@@ -17,7 +17,7 @@ class RootNavigationScreen extends StatefulWidget {
 }
 
 class _RootNavigationScreenState extends State<RootNavigationScreen> {
-  int currentIndex = 1;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _RootNavigationScreenState extends State<RootNavigationScreen> {
       child: Stack(
         children: [
           widget.navigationShell,
-          Positioned(bottom: 0, right: 0, left: 0, child: BottomBar(selectedIndex: currentIndex, onTap: _onTap,)),
+          Positioned(bottom: 0, right: 0, left: 0, child: BottomBar( onTap: _onTap,)),
         ],
       ),
     );

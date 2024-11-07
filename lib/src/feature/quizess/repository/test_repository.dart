@@ -23,7 +23,7 @@ class TestRepository {
     );
   }
 
-  Future<void> saveUserTestResult(int testId, int score) async {
+  Future<void> saveUserTestResult(String testId, int score) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     final result = TestResult(
@@ -34,7 +34,7 @@ class TestRepository {
     final List<Test> allTests = await getAllTests();
 
     for (var test in allTests) {
-      if (int.parse(test.id) == testId) {
+      if (test.id == testId) {
         test.isComplete = true;
         test.result = result;
         break;
@@ -47,12 +47,12 @@ class TestRepository {
     await prefs.setString('tests', updatedTestsJson);
   }
 
-  Future<void> updateTestProgress(int testId, int selectedAnswerScore) async {
+  Future<void> updateTestProgress(String testId, int selectedAnswerScore) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final List<Test> allTests = await getAllTests();
 
     for (var test in allTests) {
-      if (int.parse(test.id) == testId) {
+      if (test.id == testId) {
         if (test.result != null) {
           test.result!.totalScore += selectedAnswerScore;
         } else {
@@ -74,12 +74,12 @@ class TestRepository {
     await prefs.setString('tests', updatedTestsJson);
   }
 
-  Future<void> resetTest(int testId) async {
+  Future<void> resetTest(String testId) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final List<Test> allTests = await getAllTests();
 
     for (var test in allTests) {
-      if (int.parse(test.id) == testId) {
+      if (test.id == testId) {
         test.currentQuestionIndex = 0;
         test.result = null;
         test.isComplete = false;

@@ -88,7 +88,7 @@
     "relatedEvents": ["event7"]
   },   {
     "id": "date12",
-    "year": "-551",
+    "date": "-551",
     "description": "Birth of Confucius.",
     "relatedPeople": ["person13"],
     "relatedPlaces": ["place7"],
@@ -96,7 +96,7 @@
   },
   {
     "id": "date13",
-    "year": "-600",
+    "date": "-600",
     "description": "Estimated period of Lao Tzu's life and teachings.",
     "relatedPeople": ["person14"],
     "relatedPlaces": ["place8"],
@@ -104,7 +104,7 @@
   },
   {
     "id": "date14",
-    "year": "-221",
+    "date": "-221",
     "description": "Qin Shi Huang unifies China.",
     "relatedPeople": ["person15"],
     "relatedPlaces": ["place9"],
@@ -112,7 +112,7 @@
   },
   {
     "id": "date15",
-    "year": "-202",
+    "date": "-202",
     "description": "Establishment of the Han Dynasty by Liu Bang (Han Gaozu).",
     "relatedPeople": ["person16"],
     "relatedPlaces": ["place10"],
@@ -120,7 +120,7 @@
   },
   {
     "id": "date16",
-    "year": "-145",
+    "date": "-145",
     "description": "Birth of historian Sima Qian.",
     "relatedPeople": ["person17"],
     "relatedPlaces": ["place10"],
@@ -128,7 +128,7 @@
   },
   {
     "id": "date17",
-    "year": "78",
+    "date": "78",
     "description": "Zhang Heng's contributions to astronomy in the Han Dynasty.",
     "relatedPeople": ["person18"],
     "relatedPlaces": ["place10"],
@@ -136,7 +136,7 @@
   },
   {
     "id": "date18",
-    "year": "181",
+    "date": "181",
     "description": "Life and military campaigns of Guan Yu and Cao Cao during the Three Kingdoms period.",
     "relatedPeople": ["person19", "person22", "person36"],
     "relatedPlaces": ["place11"],
@@ -144,7 +144,7 @@
   },
   {
     "id": "date19",
-    "year": "701",
+    "date": "701",
     "description": "Birth of Tang poet Li Bai.",
     "relatedPeople": ["person20"],
     "relatedPlaces": ["place1"],
@@ -152,7 +152,7 @@
   },
   {
     "id": "date20",
-    "year": "1037",
+    "date": "1037",
     "description": "Life of poet Su Shi during the Song Dynasty.",
     "relatedPeople": ["person23"],
     "relatedPlaces": ["place4"],
@@ -160,7 +160,7 @@
   },
   {
     "id": "date21",
-    "year": "1368",
+    "date": "1368",
     "description": "Zhu Yuanzhang founds the Ming Dynasty.",
     "relatedPeople": ["person24"],
     "relatedPlaces": ["place12"],
@@ -168,7 +168,7 @@
   },
   {
     "id": "date22",
-    "year": "1402",
+    "date": "1402",
     "description": "Yongle Emperor ascends the throne and orders the construction of the Forbidden City.",
     "relatedPeople": ["person25"],
     "relatedPlaces": ["place13"],
@@ -176,7 +176,7 @@
   },
   {
     "id": "date23",
-    "year": "1661",
+    "date": "1661",
     "description": "Kangxi Emperor begins his reign as one of the longest-reigning emperors in China.",
     "relatedPeople": ["person26"],
     "relatedPlaces": ["place13"],
@@ -184,7 +184,7 @@
   },
   {
     "id": "date24",
-    "year": "1735",
+    "date": "1735",
     "description": "Qianlong Emperor ascends the throne, leading China to new cultural achievements.",
     "relatedPeople": ["person27"],
     "relatedPlaces": ["place13"],
@@ -192,7 +192,7 @@
   },
   {
     "id": "date25",
-    "year": "1839",
+    "date": "1839",
     "description": "Lin Zexiu leads actions against the opium trade, initiating the First Opium War.",
     "relatedPeople": ["person28"],
     "relatedPlaces": ["place14"],
@@ -200,7 +200,7 @@
   },
   {
     "id": "date26",
-    "year": "1851",
+    "date": "1851",
     "description": "Hong Xiuquan initiates the Taiping Rebellion.",
     "relatedPeople": ["person29"],
     "relatedPlaces": ["place13"],
@@ -208,7 +208,7 @@
   },
   {
     "id": "date27",
-    "year": "1895",
+    "date": "1895",
     "description": "Li Hongzhang plays a significant role in the modernization of China.",
     "relatedPeople": ["person30"],
     "relatedPlaces": ["place16"],
@@ -216,28 +216,28 @@
   },
   {
     "id": "date28",
-    "year": "1884",
+    "date": "1884",
     "description": "Birth of the famous Chinese poet Su Manshow.",
     "relatedPeople": ["person31"],
     "relatedPlaces": ["place4"]
   },
   {
     "id": "date29",
-    "year": "1864",
+    "date": "1864",
     "description": "Birth of the renowned Chinese painter Qi Baishi.",
     "relatedPeople": ["person32"],
     "relatedPlaces": ["place5"]
   },
   {
     "id": "date30",
-    "year": "1949",
+    "date": "1949",
     "description": "Founding of the People's Republic of China by Mao Zedong.",
     "relatedPeople": ["person33"],
     "relatedPlaces": ["place15"]
   },
   {
     "id": "date31",
-    "year": "1989",
+    "date": "1989",
     "description": "Death of reformist leader Hu Yaobang.",
     "relatedPeople": ["person34"],
     "relatedPlaces": ["place16"]

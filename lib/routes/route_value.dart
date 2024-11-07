@@ -5,6 +5,9 @@ enum RouteValue {
   home(
     path: '/home',
   ),
+    facts(
+    path: 'facts',
+  ),
   sections(
     path: '/sections',
   ),

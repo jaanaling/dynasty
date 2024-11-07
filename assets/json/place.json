@@ -39,7 +39,6 @@
     "id": "place5",
     "name": "Mount Lu",
     "description": "A mountain in Jiangxi Province where Zhu Xi developed Neo-Confucianism.",
-    "relatedEvents": [],
     "relatedPeople": ["person10"],
     "relatedDates": ["date9"],
     "mapLocation": "29.5573,115.9908"
@@ -52,7 +51,7 @@
     "relatedPeople": ["person12"],
     "relatedDates": ["date11"],
     "mapLocation": "39.9042,116.4074"
-  }, [
+  }, 
     {
       "id": "place7",
       "name": "Qufu, Shandong",
@@ -140,5 +139,5 @@
       "relatedDates": ["date7"],
       "mapLocation": "34.6839,112.4535"
     }
-  ]
+  
 ]

@@ -46,7 +46,7 @@ class HistoricalEvent {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'id': id,
-      'title': title,
+      'name': title,
       'description': description,
       'date': date?.millisecondsSinceEpoch,
       'relatedDates': relatedDates,
@@ -58,12 +58,12 @@ class HistoricalEvent {
   factory HistoricalEvent.fromMap(Map<String, dynamic> map) {
     return HistoricalEvent(
       id: map['id'] as String,
-      title: map['title'] as String,
+      title: map['name'] as String,
       description: map['description'] as String,
       date: map['date'] != null ? DateTime.fromMillisecondsSinceEpoch(map['date'] as int) : null,
-      relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<String>) : null,
-      relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<String>) : null,
-      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<String>) : null,
+      relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<dynamic>) : null,
+      relatedPeople: map['relatedPeople'] != null ? List<String>.from(map['relatedPeople'] as List<dynamic>) : null,
+      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<dynamic>) : null,
     );
   }
 

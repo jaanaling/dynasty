@@ -8,7 +8,7 @@ abstract class TestEvent extends Equatable {
 class LoadTestsEvent extends TestEvent {}
 
 class SubmitAnswerEvent extends TestEvent {
-  final int testId;
+  final String testId;
   final int currentQuestionIndex;
   final int score;
   final BuildContext context;

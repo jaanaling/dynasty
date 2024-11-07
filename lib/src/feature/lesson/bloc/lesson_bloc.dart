@@ -25,7 +25,7 @@ class LessonBloc extends Bloc<LessonEvent, LessonState> {
       final figure = await repository.loadFigures();
       final place = await repository.loadPlace();
 
-      emit(TestLoadedState(
+      emit(LessonLoadedState(
         lesson: lessons,
         date: date,
         event: events,
@@ -49,12 +49,12 @@ class LessonBloc extends Bloc<LessonEvent, LessonState> {
 
       final lessons = await repository.loadLessons();
 
-      emit(TestLoadedState(
+      emit(LessonLoadedState(
         lesson: lessons,
-        date: (state as TestLoadedState).date,
-        event: (state as TestLoadedState).event,
-        figure: (state as TestLoadedState).figure,
-        place: (state as TestLoadedState).place,
+        date: (state as LessonLoadedState).date,
+        event: (state as LessonLoadedState).event,
+        figure: (state as LessonLoadedState).figure,
+        place: (state as LessonLoadedState).place,
       ));
     });
     on<CompliteLessonEvent>((event, emit) async {
@@ -78,12 +78,12 @@ class LessonBloc extends Bloc<LessonEvent, LessonState> {
 
       final lessons = await repository.loadLessons();
 
-      emit(TestLoadedState(
+      emit(LessonLoadedState(
         lesson: lessons,
-        date: (state as TestLoadedState).date,
-        event: (state as TestLoadedState).event,
-        figure: (state as TestLoadedState).figure,
-        place: (state as TestLoadedState).place,
+        date: (state as LessonLoadedState).date,
+        event: (state as LessonLoadedState).event,
+        figure: (state as LessonLoadedState).figure,
+        place: (state as LessonLoadedState).place,
       ));
     });
   }

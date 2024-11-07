@@ -9,14 +9,14 @@ sealed class LessonState extends Equatable {
 
 final class LessonInitial extends LessonState {}
 
-class TestLoadedState extends LessonState {
+class LessonLoadedState extends LessonState {
   final List<LessonBlock> lesson;
   final List<HistoricalDate> date;
   final List<HistoricalEvent> event;
   final List<HistoricalFigure> figure;
   final List<HistoricalPlace> place;
 
-  const TestLoadedState({
+  const LessonLoadedState({
     required this.lesson,
     required this.date,
     required this.event,

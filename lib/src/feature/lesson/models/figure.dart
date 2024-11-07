@@ -59,9 +59,9 @@ class HistoricalFigure {
       id: map['id'] as String,
       name: map['name'] as String,
       description: map['description'] != null ? map['description'] as String : null,
-      relatedEvents: map['relatedEvents'] != null ? List<String>.from(map['relatedEvents'] as List<String>) : null,
-      relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<String>) : null,
-      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<String>) : null,
+      relatedEvents: map['relatedEvents'] != null ? List<String>.from(map['relatedEvents'] as List<dynamic>) : null,
+      relatedDates: map['relatedDates'] != null ? List<String>.from(map['relatedDates'] as List<dynamic>) : null,
+      relatedPlaces: map['relatedPlaces'] != null ? List<String>.from(map['relatedPlaces'] as List<dynamic>) : null,
       image: map['image'] != null ? map['image'] as String : null,
     );
   }
