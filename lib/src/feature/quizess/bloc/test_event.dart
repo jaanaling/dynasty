@@ -9,11 +9,13 @@ class LoadTestsEvent extends TestEvent {}
 
 class SubmitAnswerEvent extends TestEvent {
   final String testId;
+  final Test curTest;
   final int currentQuestionIndex;
   final int score;
   final BuildContext context;
 
   SubmitAnswerEvent({
+    required this.curTest,
     required this.context,
     required this.testId,
     required this.currentQuestionIndex,
@@ -21,7 +23,7 @@ class SubmitAnswerEvent extends TestEvent {
   });
 
   @override
-  List<Object> get props => [testId, currentQuestionIndex, score];
+  List<Object> get props => [testId, currentQuestionIndex, score, context, curTest];
 }
 
 class SetCurrentTestEvent extends TestEvent {

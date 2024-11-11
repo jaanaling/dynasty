@@ -107,8 +107,8 @@ Hey! 🎉 I just made some progress on my lesson "$name" and I'm getting closer 
                                           0,
                                           (previousValue, element) =>
                                               previousValue +
-                                              (element.result?.totalScore ??
-                                                  0)),
+                                              element.totalScore 
+                                                 ),
                                 );
                               },
                             ),

@@ -2,7 +2,7 @@
 import 'dart:convert';
 
 import 'package:dynasty_dive/src/feature/quizess/models/test_question.dart';
-import 'package:dynasty_dive/src/feature/quizess/models/test_result.dart';
+
 import 'package:flutter/foundation.dart';
 
 class Test {
@@ -15,7 +15,7 @@ class Test {
   bool isComplete;
   bool isOpen;
   int currentQuestionIndex;
-  TestResult? result;
+  int totalScore;
 
   Test({
     required this.id,
@@ -28,7 +28,7 @@ class Test {
     this.isOpen = false,
     this.currentQuestionIndex = 0,
 
-    this.result,
+    this.totalScore =0,
   });
 
  
@@ -43,7 +43,7 @@ class Test {
     bool? isComplete,
     bool? isOpen,
     int? currentQuestionIndex,
-    TestResult? result,
+    int? totalScore,
   }) {
     return Test(
       id: id ?? this.id,
@@ -55,7 +55,7 @@ class Test {
       isComplete: isComplete ?? this.isComplete,
       isOpen: isOpen ?? this.isOpen,
       currentQuestionIndex: currentQuestionIndex ?? this.currentQuestionIndex,
-      result: result ?? this.result,
+      totalScore: totalScore ?? this.totalScore,
     );
   }
 
@@ -71,7 +71,7 @@ class Test {
       'isOpen': isOpen,
 
       'currentQuestionIndex': currentQuestionIndex,
-      'result': result?.toMap(),
+      'totalScore': totalScore,
     };
   }
 
@@ -86,7 +86,7 @@ class Test {
       isComplete: map['isComplete'] != null ? map['isComplete'] as bool : false,
       isOpen: map['isOpen'] != null ? map['isOpen'] as bool : false,
       currentQuestionIndex:map['currentQuestionIndex'] != null ? map['currentQuestionIndex'] as int : 0,
-      result: map['result'] != null ? TestResult.fromMap(map['result'] as Map<String,dynamic>) : null,
+      totalScore: map['totalScore'] != null ?map['totalScore'] as int : 0,
     );
   }
 
@@ -96,7 +96,7 @@ class Test {
 
   @override
   String toString() {
-    return 'PsychologicalTest(id: $id, title: $title, dificulty: $dificulty, description: $description, questions: $questions, category: $category,  isComplete: $isComplete, isOpen: $isOpen, currentQuestionIndex: $currentQuestionIndex, result: $result)';
+    return 'PsychologicalTest(id: $id, title: $title, dificulty: $dificulty, description: $description, questions: $questions, category: $category,  isComplete: $isComplete, isOpen: $isOpen, currentQuestionIndex: $currentQuestionIndex, result: $totalScore)';
   }
 
   @override
@@ -114,7 +114,7 @@ class Test {
 
       other.isOpen == isOpen &&
       other.currentQuestionIndex == currentQuestionIndex &&
-      other.result == result;
+      other.totalScore == totalScore;
   }
 
   @override
@@ -129,6 +129,6 @@ class Test {
       isComplete.hashCode ^
       isOpen.hashCode ^
       currentQuestionIndex.hashCode ^
-      result.hashCode;
+      totalScore.hashCode;
   }
 }

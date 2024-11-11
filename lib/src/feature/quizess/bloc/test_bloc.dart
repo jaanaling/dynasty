@@ -8,7 +8,6 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 part 'test_event.dart';
 part 'test_state.dart';
 
@@ -41,54 +40,55 @@ class TestBloc extends Bloc<TestEvent, TestState> {
   ) async {
     final state = this.state as TestLoadedState;
 
-    if (state.currentTest != null) {
-      final tests = await testRepository.getAllTests();
-      final currentTest =
-          tests.where((t) => t.id == event.testId).first;
-      logger.d(currentTest);
-      final currentIndex = currentTest.currentQuestionIndex + 1;
+    final tests = state.tests;
+    final currentTest = event.curTest;
+    logger.d(currentTest);
+    final currentIndex = currentTest.currentQuestionIndex + 1;
 
-      // Обновляем прогресс теста и добавляем очки
-      await testRepository.updateTestProgress(
-        currentTest.id,
+    // Обновляем прогресс теста и добавляем очки
+    await testRepository.updateTestProgress(
+      currentTest.id,
+      event.score,
+    );
+    logger.d(currentTest);
+    if (currentIndex < currentTest.questions.length) {
+      final updatedTest = currentTest.copyWith(
+        currentQuestionIndex: currentIndex,
+      );
+      logger.d(updatedTest);
+
+      emit(
+        TestLoadedState(
+          tests: tests,
+          currentTest: updatedTest,
+        ),
+      );
+    } else {
+      // Сохраняем результат по завершении теста
+      await testRepository.saveUserTestResult(
+        currentTest,
         event.score,
       );
-      logger.d(currentTest);
-      if (currentIndex < currentTest.questions.length) {
-        final updatedTest = currentTest.copyWith(
-          currentQuestionIndex: currentIndex,
-        );
-        logger.d(updatedTest);
 
-        emit(
-          state.copyWith(
-            currentTest: updatedTest,
-          ),
-        );
-      } else {
-        // Сохраняем результат по завершении теста
-        await testRepository.saveUserTestResult(
-          currentTest.id,
-          event.score,
-           );
+      final tests = await testRepository.getAllTests();
 
-        final tests = await testRepository.getAllTests();
+      event.context.pushReplacement(
+        '${RouteValue.quizess.path}/${RouteValue.quizResult.path}',
+        extra: tests.firstWhere(
+          (test) => test.id == currentTest.id,
+        ),
+      );
 
-        event.context.pushReplacement(
-          '${RouteValue.quizess.path}/${RouteValue.quizResult.path}',
-          extra: tests.firstWhere(
+      emit(
+        TestLoadedState(
+          currentTest: tests.firstWhere(
             (test) => test.id == currentTest.id,
           ),
-        );
-
-        emit(
-          TestLoadedState(
-            tests: tests,
-          ),
-        );
-      }
+          tests: tests,
+        ),
+      );
     }
-  }
+    }
 
   Future<void> _onSetCurrentTest(
     SetCurrentTestEvent event,

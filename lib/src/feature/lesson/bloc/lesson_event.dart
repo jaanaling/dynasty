@@ -18,10 +18,12 @@ class CompliteLessonEvent extends LessonEvent {
   final LessonBlock lessonBlock;
   final String lessonId;
   final List<Test>? tests;
+  final BuildContext context;
 
   const CompliteLessonEvent({
     required this.lessonBlock,
     required this.lessonId,
+    required this.context,
     this.tests,
   });
 

@@ -17,7 +17,7 @@ class QuizScreen extends StatelessWidget {
       builder: (context, state) {
         if (state is TestInitial) {
           return const Center(child: CircularProgressIndicator());
-        } else if (state is TestLoadedState) {
+        } else if (state is TestLoadedState &&  state.currentTest!.currentQuestionIndex < state.currentTest!.questions.length)  {
           final curTest = state.currentTest;
 
           if (curTest == null) {
@@ -69,9 +69,9 @@ class QuizScreen extends StatelessWidget {
                       const Gap(15),
                       Expanded(
                         child: Text(
-                          curTest.dificulty == 0
+                          curTest.dificulty == 1
                               ? "Easy"
-                              : curTest.dificulty == 1
+                              : curTest.dificulty == 2
                                   ? "Medium"
                                   : "Hard",
                           style: const TextStyle(
@@ -114,9 +114,10 @@ class QuizScreen extends StatelessWidget {
                                   context: context,
                                   currentQuestionIndex:
                                       curTest.currentQuestionIndex,
-                                  score: currentQuestion.answers[index].score *
-                                      curTest.dificulty,
+                                  score: (currentQuestion.answers[index].score *
+                                      curTest.dificulty),
                                   testId: curTest.id,
+                                  curTest: curTest
                                 ),
                               );
                         },

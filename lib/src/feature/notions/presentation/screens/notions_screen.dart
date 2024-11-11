@@ -54,44 +54,42 @@ class _NotionsScreenState extends State<NotionsScreen> {
               SizedBox(
                 height: 66,
                 width: MediaQuery.of(context).size.width * 0.7,
-                child: Expanded(
-                  child: CupertinoTextField(
-                    onTapOutside: (event) =>
-                        FocusManager.instance.primaryFocus?.unfocus(),
-                    controller: searchController,
-                    placeholder: 'Enter Text ...',
-                    placeholderStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w300),
-                    textAlignVertical: TextAlignVertical.center,
-                    textInputAction: TextInputAction.done,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF222222),
-                      borderRadius: BorderRadius.circular(9),
-                      border: Border.all(
-                          width: 0.30, color: const Color(0xFFC2C2C2)),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x14000000),
-                          blurRadius: 5,
-                          offset: Offset(0, 1),
-                          spreadRadius: 0,
-                        ),
-                      ],
-                    ),
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                    suffix: Padding(
-                      padding: const EdgeInsets.only(top: 3),
-                      child: IconButton(
-                        icon: Icon(CupertinoIcons.search),
-                        color: Color(0xFFACACAC),
-                        onPressed: () {
-                          FocusManager.instance.primaryFocus?.unfocus();
-                        },
+                child: CupertinoTextField(
+                  onTapOutside: (event) =>
+                      FocusManager.instance.primaryFocus?.unfocus(),
+                  controller: searchController,
+                  placeholder: 'Enter Text ...',
+                  placeholderStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w300),
+                  textAlignVertical: TextAlignVertical.center,
+                  textInputAction: TextInputAction.done,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF222222),
+                    borderRadius: BorderRadius.circular(9),
+                    border: Border.all(
+                        width: 0.30, color: const Color(0xFFC2C2C2)),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x14000000),
+                        blurRadius: 5,
+                        offset: Offset(0, 1),
+                        spreadRadius: 0,
                       ),
+                    ],
+                  ),
+                  onChanged: (value) {
+                    setState(() {});
+                  },
+                  suffix: Padding(
+                    padding: const EdgeInsets.only(top: 3),
+                    child: IconButton(
+                      icon: Icon(CupertinoIcons.search),
+                      color: Color(0xFFACACAC),
+                      onPressed: () {
+                        FocusManager.instance.primaryFocus?.unfocus();
+                      },
                     ),
                   ),
                 ),

@@ -5,10 +5,13 @@ import 'package:dynasty_dive/src/feature/lesson/models/event.dart';
 import 'package:dynasty_dive/src/feature/lesson/models/figure.dart';
 import 'package:dynasty_dive/src/feature/lesson/models/lesson_bloc.dart';
 import 'package:dynasty_dive/src/feature/lesson/models/place.dart';
+import 'package:dynasty_dive/src/feature/quizess/bloc/test_bloc.dart';
 import 'package:dynasty_dive/src/feature/quizess/models/test.dart';
 import 'package:dynasty_dive/src/feature/quizess/repository/test_repository.dart';
 import 'package:dynasty_dive/src/feature/lesson/repository/repository.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'lesson_event.dart';
 part 'lesson_state.dart';
@@ -58,6 +61,7 @@ class LessonBloc extends Bloc<LessonEvent, LessonState> {
       ));
     });
     on<CompliteLessonEvent>((event, emit) async {
+      
       event.lessonBlock.completedLessonsCount++;
 
       event.lessonBlock.lessons
@@ -71,6 +75,7 @@ class LessonBloc extends Bloc<LessonEvent, LessonState> {
         for (var quizId in event.lessonBlock.quizzesId) {
           event.tests!.firstWhere((test) => test.id == quizId).isOpen = true;
           await testRepository.saveUserTests(event.tests!);
+          event.context.read<TestBloc>().add(LoadTestsEvent());
         }
       }
 

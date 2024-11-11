@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:dynasty_dive/src/core/utils/json_loader.dart';
 import 'package:dynasty_dive/src/feature/lesson/models/lesson_bloc.dart';
 import 'package:dynasty_dive/src/feature/quizess/models/test.dart';
-import 'package:dynasty_dive/src/feature/quizess/models/test_result.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TestRepository {
@@ -23,49 +22,30 @@ class TestRepository {
     );
   }
 
-  Future<void> saveUserTestResult(String testId, int score) async {
+  Future<void> saveUserTestResult(Test testId, int score) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-
-    final result = TestResult(
-      totalScore: score,
-      testId: testId,
-    );
-
     final List<Test> allTests = await getAllTests();
 
-    for (var test in allTests) {
-      if (test.id == testId) {
-        test.isComplete = true;
-        test.result = result;
-        break;
-      }
-    }
-
+    testId.isComplete = true;
     final String updatedTestsJson = jsonEncode(
       allTests.map((test) => test.toMap()).toList(),
     );
     await prefs.setString('tests', updatedTestsJson);
   }
 
-  Future<void> updateTestProgress(String testId, int selectedAnswerScore) async {
+  Future<void> updateTestProgress(
+      String testId, int selectedAnswerScore) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final List<Test> allTests = await getAllTests();
 
     for (var test in allTests) {
       if (test.id == testId) {
-        if (test.result != null) {
-          test.result!.totalScore += selectedAnswerScore;
-        } else {
-          test.result = TestResult(
-            totalScore: selectedAnswerScore,
-            testId: testId,
-          );
-        }
-
-        test.currentQuestionIndex = test.currentQuestionIndex + 1;
-
-        break;
+        test.totalScore += selectedAnswerScore;
       }
+
+      test.currentQuestionIndex = test.currentQuestionIndex + 1;
+
+      break;
     }
 
     final String updatedTestsJson = jsonEncode(
@@ -81,7 +61,7 @@ class TestRepository {
     for (var test in allTests) {
       if (test.id == testId) {
         test.currentQuestionIndex = 0;
-        test.result = null;
+        test.totalScore = 0;
         test.isComplete = false;
         break;
       }

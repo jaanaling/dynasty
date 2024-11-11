@@ -47,7 +47,7 @@ class _LessonScreenState extends State<LessonScreen> {
       builder: (context, state) {
         return state is LessonLoadedState
             ? ColoredBox(
-                color: Color(0xFF8E2E2E),
+                color: const Color(0xFF8E2E2E),
                 child: SafeArea(
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.fromLTRB(24, 46, 24, 120),
@@ -56,15 +56,15 @@ class _LessonScreenState extends State<LessonScreen> {
                         Row(
                           children: [
                             CupertinoButton(
-                              child: Icon(
+                              child: const Icon(
                                 CupertinoIcons.back,
                                 color: Colors.white,
                                 size: 36,
                               ),
                               onPressed: () => context.pop(),
                             ),
-                            Gap(5),
-                            SizedBox(
+                            const Gap(5),
+                            const SizedBox(
                               height: 53,
                               child: VerticalDivider(
                                 width: 2,
@@ -72,7 +72,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                 thickness: 2,
                               ),
                             ),
-                            Gap(15),
+                            const Gap(15),
                             Expanded(
                               child: Text(
                                 lesson.title,
@@ -92,28 +92,30 @@ class _LessonScreenState extends State<LessonScreen> {
                                   color: Colors.white,
                                   size: 36,
                                 ),
-                                onPressed: () => setState(() {
+                                onPressed: complete? null: () =>  setState(() {
                                       complete = !complete;
-                                      context.read<LessonBloc>().add(
-                                          CompliteLessonEvent(
-                                              lessonBlock: widget.lessons,
-                                              lessonId: widget.id,
-                                              tests: (context
-                                                      .read<TestBloc>()
-                                                      .state as TestLoadedState)
-                                                  .tests));
+                                      context
+                                          .read<LessonBloc>()
+                                          .add(CompliteLessonEvent(
+                                            lessonBlock: widget.lessons,
+                                            lessonId: widget.id,
+                                            tests: (context
+                                                    .read<TestBloc>()
+                                                    .state as TestLoadedState)
+                                                .tests, context: context
+                                          ));
                                     }))
                           ],
                         ),
-                        Gap(23),
+                        const Gap(23),
                         ListView.separated(
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemCount: lesson.topics?.length ?? 0,
-                          separatorBuilder: (_, __) => Gap(2),
+                          separatorBuilder: (_, __) => const Gap(2),
                           itemBuilder: (context, index) => Text(
-                            '•  ' + lesson.topics![index],
-                            style: TextStyle(
+                            '•  ${lesson.topics![index]}',
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 19,
                               height: 0,
@@ -121,186 +123,180 @@ class _LessonScreenState extends State<LessonScreen> {
                             ),
                           ),
                         ),
-                        Gap(33),
-                        Divider(
+                        const Gap(33),
+                        const Divider(
                           height: 2,
                           color: Color.fromARGB(37, 0, 0, 0),
                           thickness: 2,
                         ),
-                        Gap(33),
+                        const Gap(33),
                         Text(
                           lesson.description,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 19,
                             height: 0,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        Gap(33),
-                        Divider(
+                        const Gap(33),
+                        const Divider(
                           height: 2,
                           color: Color.fromARGB(37, 0, 0, 0),
                           thickness: 2,
                         ),
-                        Gap(33),
+                        const Gap(33),
                         HighlightedText(
                           content: lesson.content,
                           highlightedTexts: lesson.highlightedTexts ?? [],
                           state: state,
                         ),
-                        Gap(33),
-                        Divider(
+                        const Gap(33),
+                        const Divider(
                           height: 2,
                           color: Color.fromARGB(37, 0, 0, 0),
                           thickness: 2,
                         ),
-                        Gap(33),
-                        lesson.relatedDates != null &&
-                                lesson.relatedDates!.length > 0 &&
-                            state.date.every(
-                                (f) => lesson.relatedDates!.contains(f.id))
-                            ? Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Related Dates:',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24,
-                                    height: 0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              )
-                            : Container(),
-                        lesson.relatedDates != null &&
-                                lesson.relatedDates!.length > 0 &&
-                            state.date.every(
-                                (f) => lesson.relatedDates!.contains(f.id))
-                            ? ListView.separated(
-                                shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                padding: EdgeInsets.only(left: 24, top: 12),
-                                itemCount: lesson.relatedDates?.length ?? 0,
-                                separatorBuilder: (_, __) => Gap(2),
-                                itemBuilder: (context, index) =>
-                                    GestureDetector(
-                                  onTap: () => showLessonDialog(
-                                    context,
-                                    state.date
+                        const Gap(33),
+                        if (lesson.relatedDates != null &&
+                            lesson.relatedDates!.length > 0 &&
+                            state.date.any(
+                                (f) => lesson.relatedDates!.contains(f.id)))
+                          const Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Related Dates:',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                height: 0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        else
+                          Container(),
+                        if (lesson.relatedDates != null &&
+                            lesson.relatedDates!.length > 0 &&
+                            state.date.any(
+                                (f) => lesson.relatedDates!.contains(f.id)))
+                          ListView.separated(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            padding: const EdgeInsets.only(left: 24, top: 12),
+                            itemCount: lesson.relatedDates?.length ?? 0,
+                            separatorBuilder: (_, __) => const Gap(2),
+                            itemBuilder: (context, index) => GestureDetector(
+                              onTap: () => showLessonDialog(
+                                context,
+                                state.date
+                                    .firstWhere(
+                                      (test) =>
+                                          test.id ==
+                                          lesson.relatedDates![index],
+                                    )
+                                    .date!,
+                                state.date
                                         .firstWhere(
                                           (test) =>
                                               test.id ==
                                               lesson.relatedDates![index],
                                         )
-                                        .date!,
-                                    state.date
-                                            .firstWhere(
-                                              (test) =>
-                                                  test.id ==
-                                                  lesson.relatedDates![index],
-                                            )
-                                            .description ??
-                                        '',
-                                    null,
-                                    null,
-                                  ),
-                                  child: Text(
-                                    '•  ' +
-                                        (state.date
-                                                .firstWhere(
-                                                  (test) =>
-                                                      test.id ==
-                                                      lesson
-                                                          .relatedDates![index],
-                                                )
-                                                .date ??
-                                            ''),
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                      fontSize: 19,
-                                      height: 0,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
+                                        .description ??
+                                    '',
+                                null,
+                                null,
+                              ),
+                              child: Text(
+                                '•  ${state.date.firstWhere(
+                                      (test) =>
+                                          test.id ==
+                                          lesson.relatedDates![index],
+                                    ).date ?? ''}',
+                                style: const TextStyle(
+                                  color: CupertinoColors.activeBlue,
+                                  fontSize: 19,
+                                  height: 0,
+                                  fontWeight: FontWeight.w500,
                                 ),
-                              )
-                            : Container(),
-                        Gap(33),
-                        lesson.relatedPeople != null &&
-                                lesson.relatedPeople!.length > 0 &&
-                            state.figure.every(
-                                (f) => lesson.relatedPeople!.contains(f.id))
-                            ? Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Related People:',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24,
-                                    height: 0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              )
-                            : Container(),
-                        lesson.relatedPeople != null &&
-                                lesson.relatedPeople!.length > 0 &&
-                            state.figure.every(
-                                (f) => lesson.relatedPeople!.contains(f.id))
-                            ? ListView.separated(
-                                shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
-                                padding: EdgeInsets.only(left: 24, top: 12),
-                                itemCount: lesson.relatedPeople?.length ?? 0,
-                                separatorBuilder: (_, __) => Gap(2),
-                                itemBuilder: (context, index) =>
-                                    GestureDetector(
-                                  onTap: () => showLessonDialog(
-                                    context,
-                                    state.figure
+                              ),
+                            ),
+                          )
+                        else
+                          Container(),
+                        const Gap(33),
+                        if (lesson.relatedPeople != null &&
+                            lesson.relatedPeople!.length > 0 &&
+                            state.figure.any(
+                                (f) => lesson.relatedPeople!.contains(f.id)))
+                          const Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Related People:',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                height: 0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        else
+                          Container(),
+                        if (lesson.relatedPeople != null &&
+                            lesson.relatedPeople!.length > 0 &&
+                            state.figure.any(
+                                (f) => lesson.relatedPeople!.contains(f.id)))
+                          ListView.separated(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            padding: const EdgeInsets.only(left: 24, top: 12),
+                            itemCount: lesson.relatedPeople?.length ?? 0,
+                            separatorBuilder: (_, __) => const Gap(2),
+                            itemBuilder: (context, index) => GestureDetector(
+                              onTap: () => showLessonDialog(
+                                context,
+                                state.figure
+                                    .firstWhere(
+                                      (test) =>
+                                          test.id ==
+                                          lesson.relatedPeople![index],
+                                    )
+                                    .name,
+                                state.figure
                                         .firstWhere(
                                           (test) =>
                                               test.id ==
                                               lesson.relatedPeople![index],
                                         )
-                                        .name,
-                                    state.figure
-                                            .firstWhere(
-                                              (test) =>
-                                                  test.id ==
-                                                  lesson.relatedPeople![index],
-                                            )
-                                            .description ??
-                                        '',
-                                    null,
-                                    null,
-                                  ),
-                                  child: Text(
-                                    '•  ' +
-                                        state.figure
-                                            .firstWhere(
-                                              (test) =>
-                                                  test.id ==
-                                                  lesson.relatedPeople![index],
-                                            )
-                                            .name,
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                      fontSize: 19,
-                                      height: 0,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
+                                        .description ??
+                                    '',
+                                null,
+                                null,
+                              ),
+                              child: Text(
+                                '•  ${state.figure.firstWhere(
+                                      (test) =>
+                                          test.id ==
+                                          lesson.relatedPeople![index],
+                                    ).name}',
+                                style: const TextStyle(
+                                  color: CupertinoColors.activeBlue,
+                                  fontSize: 19,
+                                  height: 0,
+                                  fontWeight: FontWeight.w500,
                                 ),
-                              )
-                            : Container(),
-                        Gap(33),
+                              ),
+                            ),
+                          )
+                        else
+                          Container(),
+                        const Gap(33),
                         if (lesson.relatedPlaces != null &&
                             lesson.relatedPlaces!.isNotEmpty &&
-                            state.place.every(
+                            state.place.any(
                                 (f) => lesson.relatedPlaces!.contains(f.id)))
-                          Align(
+                          const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
                               'Related Places:',
@@ -317,14 +313,14 @@ class _LessonScreenState extends State<LessonScreen> {
                           Container(),
                         if (lesson.relatedPlaces != null &&
                             lesson.relatedPlaces!.length > 0 &&
-                            state.place.every(
+                            state.place.any(
                                 (f) => lesson.relatedPlaces!.contains(f.id)))
                           ListView.separated(
                             shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            padding: EdgeInsets.only(left: 24, top: 12),
+                            physics: const NeverScrollableScrollPhysics(),
+                            padding: const EdgeInsets.only(left: 24, top: 12),
                             itemCount: lesson.relatedPlaces?.length ?? 0,
-                            separatorBuilder: (_, __) => Gap(2),
+                            separatorBuilder: (_, __) => const Gap(2),
                             itemBuilder: (context, index) => GestureDetector(
                               onTap: () => showLessonDialog(
                                   context,
@@ -361,16 +357,13 @@ class _LessonScreenState extends State<LessonScreen> {
                                           .mapLocation!
                                           .split(",")[1]))),
                               child: Text(
-                                '•  ' +
-                                    state.place
-                                        .firstWhere(
-                                          (test) =>
-                                              test.id ==
-                                              lesson.relatedPlaces![index],
-                                        )
-                                        .name,
-                                style: TextStyle(
-                                  color: Colors.blue,
+                                '•  ${state.place.firstWhere(
+                                      (test) =>
+                                          test.id ==
+                                          lesson.relatedPlaces![index],
+                                    ).name}',
+                                style: const TextStyle(
+                                  color: CupertinoColors.activeBlue,
                                   fontSize: 19,
                                   height: 0,
                                   fontWeight: FontWeight.w500,
@@ -380,7 +373,7 @@ class _LessonScreenState extends State<LessonScreen> {
                           )
                         else
                           Container(),
-                        Gap(33),
+                        const Gap(33),
                       ],
                     ),
                   ),
@@ -407,7 +400,8 @@ class HighlightedText extends StatelessWidget {
   Widget build(BuildContext context) {
     List<TextSpan> spans = _buildTextSpans(context, content, highlightedTexts);
     return RichText(
-      text: TextSpan(children: spans, style: TextStyle(color: Colors.black)),
+      text: TextSpan(
+          children: spans, style: const TextStyle(color: Colors.black)),
     );
   }
 
@@ -428,7 +422,7 @@ class HighlightedText extends StatelessWidget {
           spans.add(
             TextSpan(
               text: text.substring(start, index),
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 19,
                 height: 0,
@@ -442,11 +436,11 @@ class HighlightedText extends StatelessWidget {
         spans.add(
           TextSpan(
             text: word,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20,
               height: 0,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF353535),
+              color: CupertinoColors.activeBlue,
             ),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
@@ -516,7 +510,7 @@ class HighlightedText extends StatelessWidget {
       spans.add(
         TextSpan(
           text: text.substring(start),
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 19,
             height: 0,
