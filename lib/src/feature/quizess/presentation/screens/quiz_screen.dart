@@ -1,4 +1,5 @@
 import 'package:dynasty_dive/routes/route_value.dart';
+import 'package:dynasty_dive/src/core/utils/log.dart';
 import 'package:dynasty_dive/src/feature/quizess/bloc/test_bloc.dart';
 import 'package:dynasty_dive/ui_kit/app_tile.dart';
 import 'package:dynasty_dive/ui_kit/cupertino_snack_bar.dart';
@@ -15,9 +16,15 @@ class QuizScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<TestBloc, TestState>(
       builder: (context, state) {
+        logger.d(state is TestLoadedState);
+        logger.d(state);
+        logger.d((state as TestLoadedState).currentTest!.currentQuestionIndex ) ;
+        logger.d(
+            (state as TestLoadedState).currentTest!.questions.length);
         if (state is TestInitial) {
           return const Center(child: CircularProgressIndicator());
-        } else if (state is TestLoadedState &&  state.currentTest!.currentQuestionIndex < state.currentTest!.questions.length)  {
+        } else if (state is TestLoadedState
+          ) {
           final curTest = state.currentTest;
 
           if (curTest == null) {
@@ -111,14 +118,14 @@ class QuizScreen extends StatelessWidget {
                         onTap: () {
                           context.read<TestBloc>().add(
                                 SubmitAnswerEvent(
-                                  context: context,
-                                  currentQuestionIndex:
-                                      curTest.currentQuestionIndex,
-                                  score: (currentQuestion.answers[index].score *
-                                      curTest.dificulty),
-                                  testId: curTest.id,
-                                  curTest: curTest
-                                ),
+                                    context: context,
+                                    currentQuestionIndex:
+                                        curTest.currentQuestionIndex,
+                                    score:
+                                        (currentQuestion.answers[index].score *
+                                            curTest.dificulty),
+                                    testId: curTest.id,
+                                    curTest: curTest),
                               );
                         },
                       );

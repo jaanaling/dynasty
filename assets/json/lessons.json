@@ -1,7 +1,7 @@
  [
   {
     "id": "block1",
-    "quizzesId": ["quiz1","quiz2","quiz3","quiz4"],
+    "quizzesId": ["quiz2","quiz3","quiz4"],
     "title": "Tang Dynasty Insights",
     "description": "Exploring the rich history and culture of the Tang Dynasty.",
     "lessons": [

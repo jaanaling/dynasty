@@ -1,42 +1,4 @@
-[{
-    "id": "quiz1",
-    "title": "Basics of the Tang Dynasty",
-    "description": "A test on key events and figures of the Tang Dynasty.",
-    "dificulty": 1,
-    "category": "History",
-    "questions": [
-      {
-        "id": "q1",
-        "question": "When was the Tang Dynasty founded?",
-        "answers": [
-          {"id": "a1", "answerText": "618 AD", "score": 1},
-          {"id": "a2", "answerText": "581 AD", "score": 0},
-          {"id": "a3", "answerText": "626 AD", "score": 0},
-          {"id": "a4", "answerText": "660 AD", "score": 0}
-        ]
-      },
-      {
-        "id": "q2",
-        "question": "Who was the first emperor of the Tang Dynasty?",
-        "answers": [
-          {"id": "a1", "answerText": "Li Yuan", "score": 1},
-          {"id": "a2", "answerText": "Li Shimin", "score": 0},
-          {"id": "a3", "answerText": "Wu Zetian", "score": 0},
-          {"id": "a4", "answerText": "An Lushan", "score": 0}
-        ]
-      },
-      {
-        "id": "q3",
-        "question": "What city became the capital of the Tang Dynasty?",
-        "answers": [
-          {"id": "a1", "answerText": "Chang'an", "score": 1},
-          {"id": "a2", "answerText": "Luoyang", "score": 0},
-          {"id": "a3", "answerText": "Nanjing", "score": 0},
-          {"id": "a4", "answerText": "Beijing", "score": 0}
-        ]
-      }
-    ]
-  },
+[
   {
     "id": "quiz2",
     "title": "The Rise of Emperor Taizong",

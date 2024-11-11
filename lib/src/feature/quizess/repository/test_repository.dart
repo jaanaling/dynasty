@@ -25,8 +25,10 @@ class TestRepository {
   Future<void> saveUserTestResult(Test testId, int score) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final List<Test> allTests = await getAllTests();
-
-    testId.isComplete = true;
+int id = allTests.indexWhere( (test)=> test.id == testId.id);
+    allTests[id].totalScore = score;
+    allTests[id].isComplete = true;
+    allTests[id].currentQuestionIndex = 0;
     final String updatedTestsJson = jsonEncode(
       allTests.map((test) => test.toMap()).toList(),
     );

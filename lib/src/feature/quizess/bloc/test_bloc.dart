@@ -42,20 +42,20 @@ class TestBloc extends Bloc<TestEvent, TestState> {
 
     final tests = state.tests;
     final currentTest = event.curTest;
-    logger.d(currentTest);
-    final currentIndex = currentTest.currentQuestionIndex + 1;
 
+    final currentIndex = currentTest.currentQuestionIndex + 1;
+logger.d( "$currentIndex index");
     // Обновляем прогресс теста и добавляем очки
     await testRepository.updateTestProgress(
       currentTest.id,
       event.score,
     );
-    logger.d(currentTest);
+  
     if (currentIndex < currentTest.questions.length) {
       final updatedTest = currentTest.copyWith(
         currentQuestionIndex: currentIndex,
       );
-      logger.d(updatedTest);
+ 
 
       emit(
         TestLoadedState(
