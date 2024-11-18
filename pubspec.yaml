@@ -1,0 +1,56 @@
+name: dynasty_dive
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^14.1.4
+  logger: ^2.0.2+1
+  flutter_bloc: ^8.1.5
+  gap: ^3.0.1
+  get_it: ^7.7.0
+  shared_preferences: ^2.3.1
+  flutter_svg: ^2.0.10+1
+  advertising_id: ^2.6.0
+  cupertino_icons: ^1.0.8
+  json_annotation: ^4.8.1
+  flutter_localizations:
+    sdk: flutter
+  share_plus: ^10.1.1
+  equatable: ^2.0.5
+  percent_indicator: ^4.2.3
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  core_logic:
+    git:
+      url: https://github.com/Vennylost/core_logic.git
+      tag: 1.0.0 # change to current version
+      ref: appsflyer_integration_v1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lint: ^2.3.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/json/
+    - assets/fonts/
+    - assets/generated/
+  fonts:
+    - family: 'Stetica'
+      fonts:
+        - asset: assets/fonts/AA Stetica Medium.otf
+          weight: 500
+        - asset: assets/fonts/AA Stetica Regular.otf
+          weight: 400
+        - asset: assets/fonts/AA Stetica Light Italic.otf
+          weight: 300

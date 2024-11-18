@@ -1,0 +1,186 @@
+[
+  {
+    "id": "event1",
+    "name": "Foundation of the Tang Dynasty",
+    "description": "Li Yuan establishes the Tang Dynasty.",
+    "relatedPeople": ["person1", "person2"],
+    "relatedPlaces": ["place1"],
+    "relatedDates": ["date1"]
+  },
+  {
+    "id": "event2",
+    "name": "Xuanzang's Pilgrimage",
+    "description": "Xuanzang's journey to India for Buddhist texts.",
+    "relatedPeople": ["person4"],
+    "relatedPlaces": ["place3"],
+    "relatedDates": ["date3"]
+  },
+  {
+    "id": "event3",
+    "name": "Wu Zetian's Reign",
+    "description": "Wu Zetian declares herself emperor.",
+    "relatedPeople": ["person3", "person5"],
+    "relatedPlaces": ["place2"],
+    "relatedDates": ["date4"]
+  },
+  {
+    "id": "event4",
+    "name": "An Lushan Rebellion",
+    "description": "A devastating rebellion led by An Lushan.",
+    "relatedPeople": ["person6", "person7"],
+    "relatedPlaces": ["place1"],
+    "relatedDates": ["date5", "date6"]
+  },
+  {
+    "id": "event5",
+    "name": "End of the Tang Dynasty",
+    "description": "The collapse of the Tang Dynasty.",
+    "relatedPeople": ["person8"],
+    "relatedPlaces": ["place1"],
+    "relatedDates": ["date7"]
+  },
+  {
+    "id": "event6",
+    "name": "Foundation of the Song Dynasty",
+    "description": "Emperor Taizu of Song establishes the Song Dynasty.",
+    "relatedPeople": ["person9"],
+    "relatedPlaces": ["place4"],
+    "relatedDates": ["date8"]
+  },
+  {
+    "id": "event7",
+    "name": "Establishment of the Yuan Dynasty",
+    "description": "Kublai Khan founds the Yuan Dynasty.",
+    "relatedPeople": ["person12"],
+    "relatedPlaces": ["place6"],
+    "relatedDates": ["date11"]
+  },   
+    {
+      "id": "event8",
+      "name": "Teachings of Confucius",
+      "description": "Confucius travels across China teaching his philosophy.",
+      "relatedPeople": ["person13"],
+      "relatedPlaces": ["place7"],
+      "relatedDates": ["date12"]
+    },
+    {
+      "id": "event9",
+      "name": "Philosophical Writings of Lao Tzu",
+      "description": "Lao Tzu authors the Tao Te Ching, forming the foundation of Taoism.",
+      "relatedPeople": ["person14"],
+      "relatedPlaces": ["place8"],
+      "relatedDates": ["date13"]
+    },
+    {
+      "id": "event10",
+      "name": "Unification of China under Qin Shi Huang",
+      "description": "Qin Shi Huang unifies the Warring States into a centralized empire.",
+      "relatedPeople": ["person15"],
+      "relatedPlaces": ["place9"],
+      "relatedDates": ["date14"]
+    },
+    {
+      "id": "event11",
+      "name": "Founding of the Han Dynasty",
+      "description": "Liu Bang, known as Han Gaozu, establishes the Han Dynasty.",
+      "relatedPeople": ["person16"],
+      "relatedPlaces": ["place10"],
+      "relatedDates": ["date15"]
+    },
+    {
+      "id": "event12",
+      "name": "Historical Writings of Sima Qian",
+      "description": "Sima Qian authors 'Records of the Grand Historian', the first comprehensive history of China.",
+      "relatedPeople": ["person17"],
+      "relatedPlaces": ["place10"],
+      "relatedDates": ["date16"]
+    },
+    {
+      "id": "event13",
+      "name": "Scientific Contributions of Zhang Heng",
+      "description": "Zhang Heng develops early seismographs and makes advances in astronomy.",
+      "relatedPeople": ["person18"],
+      "relatedPlaces": ["place10"],
+      "relatedDates": ["date17"]
+    },
+    {
+      "id": "event14",
+      "name": "Three Kingdoms Period",
+      "description": "Era marked by the battles of Guan Yu and Cao Cao.",
+      "relatedPeople": ["person19", "person22", "person36"],
+      "relatedPlaces": ["place11"],
+      "relatedDates": ["date18"]
+    },
+    {
+      "id": "event15",
+      "name": "Golden Age of Tang Poetry",
+      "description": "Notable works by poets like Li Bai and Yan Zhenqing.",
+      "relatedPeople": ["person20", "person37"],
+      "relatedPlaces": ["place1"],
+      "relatedDates": ["date19"]
+    },
+    {
+      "id": "event16",
+      "name": "Song Dynasty Reforms",
+      "description": "Reforms led by Su Shi and Wang Anshi.",
+      "relatedPeople": ["person23", "person38"],
+      "relatedPlaces": ["place4"],
+      "relatedDates": ["date20"]
+    },
+    {
+      "id": "event17",
+      "name": "Establishment of the Ming Dynasty",
+      "description": "Zhu Yuanzhang founds the Ming Dynasty.",
+      "relatedPeople": ["person24"],
+      "relatedPlaces": ["place12"],
+      "relatedDates": ["date21"]
+    },
+    {
+      "id": "event18",
+      "name": "Construction of the Forbidden City",
+      "description": "Initiated by the Yongle Emperor.",
+      "relatedPeople": ["person25"],
+      "relatedPlaces": ["place13"],
+      "relatedDates": ["date22"]
+    },
+    {
+      "id": "event19",
+      "name": "Reign of Kangxi Emperor",
+      "description": "Kangxi leads military campaigns and cultural projects.",
+      "relatedPeople": ["person26"],
+      "relatedPlaces": ["place13"],
+      "relatedDates": ["date23"]
+    },
+    {
+      "id": "event20",
+      "name": "Reign of Qianlong Emperor",
+      "description": "Qianlong's reign marks a peak in cultural achievements.",
+      "relatedPeople": ["person27"],
+      "relatedPlaces": ["place13"],
+      "relatedDates": ["date24"]
+    },
+    {
+      "id": "event21",
+      "name": "First Opium War",
+      "description": "Lin Zexiu's anti-opium efforts lead to conflict with Britain.",
+      "relatedPeople": ["person28"],
+      "relatedPlaces": ["place14"],
+      "relatedDates": ["date25"]
+    },
+    {
+      "id": "event22",
+      "name": "Taiping Rebellion",
+      "description": "Hong Xiuquan leads a major rebellion.",
+      "relatedPeople": ["person29"],
+      "relatedPlaces": ["place13"],
+      "relatedDates": ["date26"]
+    },
+    {
+      "id": "event23",
+      "name": "Efforts to Modernize China",
+      "description": "Li Hongzhang plays a key role in modernization efforts.",
+      "relatedPeople": ["person30"],
+      "relatedPlaces": ["place16"],
+      "relatedDates": ["date27"]
+    }
+]

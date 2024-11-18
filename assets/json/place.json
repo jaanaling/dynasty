@@ -1,0 +1,143 @@
+[
+  {
+    "id": "place1",
+    "name": "Chang'an",
+    "description": "Capital of the Tang Dynasty.",
+    "relatedEvents": ["event1", "event4", "event5"],
+    "relatedPeople": ["person1", "person2", "person6", "person7", "person8"],
+    "relatedDates": ["date1", "date2", "date5", "date6", "date7"],
+    "mapLocation": "34.3416,108.9398"
+  },
+  {
+    "id": "place2",
+    "name": "Luoyang",
+    "description": "Eastern capital during the Tang Dynasty, associated with Wu Zetian.",
+    "relatedEvents": ["event3"],
+    "relatedPeople": ["person3", "person5"],
+    "relatedDates": ["date2", "date4"],
+    "mapLocation": "34.6197,112.4540"
+  },
+  {
+    "id": "place3",
+    "name": "Silk Road",
+    "description": "The ancient trade route that connected China with the West, traversed by Xuanzang.",
+    "relatedEvents": ["event2"],
+    "relatedPeople": ["person4"],
+    "relatedDates": ["date3"],
+    "mapLocation": "35.0000,105.0000"
+  },
+  {
+    "id": "place4",
+    "name": "Kaifeng",
+    "description": "Early capital of the Song Dynasty.",
+    "relatedEvents": ["event6"],
+    "relatedPeople": ["person9", "person11"],
+    "relatedDates": ["date8", "date10"],
+    "mapLocation": "34.7972,114.3073"
+  },
+  {
+    "id": "place5",
+    "name": "Mount Lu",
+    "description": "A mountain in Jiangxi Province where Zhu Xi developed Neo-Confucianism.",
+    "relatedPeople": ["person10"],
+    "relatedDates": ["date9"],
+    "mapLocation": "29.5573,115.9908"
+  },
+  {
+    "id": "place6",
+    "name": "Dadu",
+    "description": "Capital of the Yuan Dynasty, established by Kublai Khan.",
+    "relatedEvents": ["event7"],
+    "relatedPeople": ["person12"],
+    "relatedDates": ["date11"],
+    "mapLocation": "39.9042,116.4074"
+  }, 
+    {
+      "id": "place7",
+      "name": "Qufu, Shandong",
+      "description": "Birthplace of Confucius.",
+      "relatedPeople": ["person13"],
+      "relatedDates": ["date12"],
+      "relatedEvents": ["event8"]
+    },
+    {
+      "id": "place8",
+      "name": "Luyi, Henan",
+      "description": "Birthplace of Lao Tzu.",
+      "relatedPeople": ["person14"],
+      "relatedDates": ["date13"],
+      "relatedEvents": ["event9"]
+    },
+    {
+      "id": "place9",
+      "name": "Xianyang",
+      "description": "Capital of the Qin Dynasty under Qin Shi Huang.",
+      "relatedPeople": ["person15"],
+      "relatedDates": ["date14"],
+      "relatedEvents": ["event10"]
+    },
+    {
+      "id": "place10",
+      "name": "Chang'an (modern Xi'an)",
+      "description": "Capital of the Han Dynasty.",
+      "relatedPeople": ["person16", "person17", "person18"],
+      "relatedDates": ["date15", "date16", "date17"],
+      "relatedEvents": ["event11", "event12", "event13"]
+    },
+    {
+      "id": "place11",
+      "name": "Jingzhou",
+      "description": "Military base of Guan Yu during the Three Kingdoms period.",
+      "relatedPeople": ["person19", "person22", "person36"],
+      "relatedDates": ["date18"],
+      "relatedEvents": ["event14"]
+    },
+    {
+      "id": "place12",
+      "name": "Nanjing",
+      "description": "Capital during the early Ming Dynasty.",
+      "relatedPeople": ["person24"],
+      "relatedDates": ["date21"],
+      "relatedEvents": ["event17"]
+    },
+    {
+      "id": "place13",
+      "name": "Beijing",
+      "description": "The Forbidden City, constructed under the Ming and Qing Dynasties.",
+      "relatedPeople": ["person25", "person26", "person27", "person29"],
+      "relatedDates": ["date22", "date23", "date24", "date26"],
+      "relatedEvents": ["event18", "event19", "event20", "event22"]
+    },
+    {
+      "id": "place14",
+      "name": "Guangzhou",
+      "description": "Key location in the First Opium War.",
+      "relatedPeople": ["person28"],
+      "relatedDates": ["date25"],
+      "relatedEvents": ["event21"]
+    },
+    {
+      "id": "place15",
+      "name": "Hunan Province",
+      "description": "Birthplace of Mao Zedong.",
+      "relatedPeople": ["person33"],
+      "relatedDates": ["date30"]
+    },
+    {
+      "id": "place16",
+      "name": "Shanghai",
+      "description": "Major city involved in modernizing efforts in late Qing and early Republican eras.",
+      "relatedPeople": ["person30", "person34"],
+      "relatedDates": ["date27", "date31"]
+    },
+    {
+      "id": "place17",
+      "name": "Luoyang",
+      "description": "Another capital city during the Tang Dynasty known for its cultural significance.",
+      "relatedEvents": ["event9"],
+      "relatedPeople": ["person26"],
+      "relatedDates": ["date7"],
+      "mapLocation": "34.6839,112.4535"
+    }
+  
+]
