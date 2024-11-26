@@ -1,0 +1,44 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Собрать и подписать приложение"
+  lane :build_ios do
+    # Авторизация через ключ App Store Connect
+    app_store_connect_api_key(
+      key_id: ENV["ASC_KEY_ID"],
+      issuer_id: ENV["ASC_KEY_ISSUER_ID"],
+      key_content: ENV["ASC_KEY_CONTENT"],
+      is_key_content_base64: true
+    )
+
+    # Настройка связки ключей
+    create_keychain(
+      name: ENV["MATCH_KEYCHAIN_NAME"],
+      password: ENV["MATCH_KEYCHAIN_PASSWORD"],
+      unlock: true
+    )
+
+    # Синхронизация сертификатов и профилей
+    match(
+      type: "appstore", # Или "development" для разработки
+      app_identifier: ENV["APP_BUNDLE_ID"],
+      readonly: false # Позволяет обновлять профили при необходимости
+    )
+
+    # Сборка через Flutter
+    sh "flutter clean"
+    sh "flutter pub get"
+    sh "flutter build ios --release --no-codesign"
+
+    # Архивация и подпись
+    gym(
+      workspace: "Runner.xcworkspace",
+      scheme: "Runner",
+      export_method: "app-store", # Замените на "development" или "adhoc", если нужно
+      xcargs: "-allowProvisioningUpdates",
+      clean: true,
+      output_directory: "./build/ios",
+      output_name: "App.ipa"
+    )
+  end
+end
